@@ -11,7 +11,6 @@ public class Manager {
     private String managerUsername;
     private String managerPassword;
     private String managerNickname;
-    private Date createTime;
     private Integer managerMark;
-
+    private Date createTime;
 }

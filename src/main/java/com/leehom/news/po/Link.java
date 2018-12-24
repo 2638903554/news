@@ -8,6 +8,6 @@ import java.util.Date;
 public class Link {
     private Integer linkId;
     private String linkName;
-    private String linkAddress;
+    private String linkUrl;
     private Date createTime;
 }

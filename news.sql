@@ -84,7 +84,7 @@ CREATE TABLE `news` (
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`news_id`),
   KEY `StyleId` (`style_id`),
-  CONSTRAINT `news_ibfk_1` FOREIGN KEY (`style_id`) REFERENCES `style` (`style_id`)
+  CONSTRAINT `news_ibfk_1` FOREIGN KEY (`style_id`) REFERENCES detail (detail_id)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -102,7 +102,7 @@ UNLOCK TABLES;
 -- Table structure for table `newstype`
 --
 
-DROP TABLE IF EXISTS `newstype`;
+DROP TABLE IF EXISTS type;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `newstype` (
@@ -117,17 +117,17 @@ CREATE TABLE `newstype` (
 -- Dumping data for table `newstype`
 --
 
-LOCK TABLES `newstype` WRITE;
-/*!40000 ALTER TABLE `newstype` DISABLE KEYS */;
-INSERT INTO `newstype` VALUES (15,'体育','2018-05-09 12:12:10'),(42,'娱乐','2018-05-09 14:12:10'),(43,'财经','2018-05-09 16:12:10');
-/*!40000 ALTER TABLE `newstype` ENABLE KEYS */;
+LOCK TABLES type WRITE;
+/*!40000 ALTER TABLE type DISABLE KEYS */;
+INSERT INTO type VALUES (15,'体育','2018-05-09 12:12:10'),(42,'娱乐','2018-05-09 14:12:10'),(43,'财经','2018-05-09 16:12:10');
+/*!40000 ALTER TABLE type ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
 -- Table structure for table `style`
 --
 
-DROP TABLE IF EXISTS `style`;
+DROP TABLE IF EXISTS detail;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `style` (
@@ -137,7 +137,7 @@ CREATE TABLE `style` (
   `news_id` int(11) NOT NULL DEFAULT '15',
   PRIMARY KEY (`style_id`),
   KEY `NewsTypeId` (`news_id`),
-  CONSTRAINT `style_ibfk_1` FOREIGN KEY (`news_id`) REFERENCES `newstype` (`type_id`)
+  CONSTRAINT `style_ibfk_1` FOREIGN KEY (`news_id`) REFERENCES type (`type_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -145,10 +145,10 @@ CREATE TABLE `style` (
 -- Dumping data for table `style`
 --
 
-LOCK TABLES `style` WRITE;
-/*!40000 ALTER TABLE `style` DISABLE KEYS */;
-INSERT INTO `style` VALUES (38,'足球','2018-05-09 20:14:10',15),(42,'电影','2018-05-09 21:12:10',42),(43,'明星','2018-05-09 21:14:10',42),(47,'股票','2018-05-09 23:12:10',43),(48,'基金','2018-05-09 23:16:10',43),(55,'篮球','2018-05-09 23:29:59',15);
-/*!40000 ALTER TABLE `style` ENABLE KEYS */;
+LOCK TABLES detail WRITE;
+/*!40000 ALTER TABLE detail DISABLE KEYS */;
+INSERT INTO detail VALUES (38,'足球','2018-05-09 20:14:10',15),(42,'电影','2018-05-09 21:12:10',42),(43,'明星','2018-05-09 21:14:10',42),(47,'股票','2018-05-09 23:12:10',43),(48,'基金','2018-05-09 23:16:10',43),(55,'篮球','2018-05-09 23:29:59',15);
+/*!40000 ALTER TABLE detail ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

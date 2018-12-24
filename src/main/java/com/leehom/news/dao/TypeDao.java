@@ -1,4 +1,4 @@
 package com.leehom.news.dao;
 
-public interface NewsTypeDao {
+public interface TypeDao {
 }

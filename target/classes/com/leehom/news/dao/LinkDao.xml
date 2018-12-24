@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper>
+<mapper namespace="com.leehom.news.dao.LinkDao">
+
+    <select id="selectLinkById" resultType="Link">
+        select link_id linkId,
+               link_name linkName,
+               link_address linkAddress
+        from link
+        where link_id = #{linkId}
+    </select>
+
+    <!--不使用mapUnderscoreToCamelCase-->
+    <!--<select id="selectAll" resultType="Link">-->
+        <!--select link_id linkId,-->
+               <!--link_name linkName,-->
+               <!--link_address linkAddress-->
+        <!--from link-->
+    <!--</select>-->
+
+    <!--使用mapUnderscoreToCamelCase-->
+    <select id="selectAll" resultType="Link">
+        select link_id,link_name,link_address from link
+    </select>
+
+
+    <select id="selectByLink" resultType="Link">
+        select link_id,
+               link_name,
+               link_address
+        from link
+        where 1 = 1
+        <if test="linkId != null and linkId !=''">
+            and link_id like concat('%',#{linkId},'%')
+        </if>
+        <if test="linkName != null and linkName !=''">
+            and link_name = #{linkName}
+        </if>
+    </select>
 
 </mapper>
