@@ -19,8 +19,6 @@ public class ManagerDaoTest extends BaseDaoTest {
         try {
             ManagerDao managerDao = sqlSession.getMapper(ManagerDao.class);
             Manager manager = managerDao.selectManagerById(1);
-
-//            Assert.assertEquals("总管理员",manager.getManagerMark());
         }finally {
             sqlSession.close();
         }
@@ -32,7 +30,7 @@ public class ManagerDaoTest extends BaseDaoTest {
         try {
             ManagerDao managerDao = sqlSession.getMapper(ManagerDao.class);
             List<Manager> managerList = managerDao.selectAll();
-
+            Assert.assertTrue(managerList.size() > 0);
         }finally {
             sqlSession.close();
         }
@@ -50,7 +48,6 @@ public class ManagerDaoTest extends BaseDaoTest {
             int result = managerDao.insertManager(manager);
             log.info("{}",result);
         }finally {
-//            sqlSession.rollback();
             sqlSession.commit();
             sqlSession.close();
         }
@@ -66,7 +63,6 @@ public class ManagerDaoTest extends BaseDaoTest {
             log.info("{}",result);
 
         }finally {
-//            sqlSession.rollback();
             sqlSession.commit();
             sqlSession.close();
         }
@@ -77,8 +73,6 @@ public class ManagerDaoTest extends BaseDaoTest {
         SqlSession sqlSession = getSqlSession();
         try {
             ManagerDao managerDao = getSqlSession().getMapper(ManagerDao.class);
-//            Manager manager = managerDao.selectManagerById(24);
-//            log.info("{}",manager);
             Manager manager = new Manager();
             manager.setManagerId(24);
             manager.setManagerPassword("123456");
@@ -87,11 +81,7 @@ public class ManagerDaoTest extends BaseDaoTest {
             manager.setManagerMark(0);
             manager.setCreateTime(new Date());
             int result = managerDao.updateManager(manager);
-
-//            manager = managerDao.selectManagerById(24);
-//            log.info("{}",manager);
         }finally {
-//            sqlSession.rollback();
             sqlSession.commit();
             sqlSession.close();
         }
