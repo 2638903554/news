@@ -5,7 +5,7 @@
     <select id="selectLinkById" resultType="Link">
         select link_id linkId,
                link_name linkName,
-               link_address linkAddress
+               link_url linkAddress
         from link
         where link_id = #{linkId}
     </select>
@@ -14,20 +14,20 @@
     <!--<select id="selectAll" resultType="Link">-->
         <!--select link_id linkId,-->
                <!--link_name linkName,-->
-               <!--link_address linkAddress-->
+               <!--link_address linkUrl-->
         <!--from link-->
     <!--</select>-->
 
     <!--使用mapUnderscoreToCamelCase-->
     <select id="selectAll" resultType="Link">
-        select link_id,link_name,link_address from link
+        select link_id,link_name,link_url from link
     </select>
 
 
     <select id="selectByLink" resultType="Link">
         select link_id,
                link_name,
-               link_address
+               link_url
         from link
         where 1 = 1
         <if test="linkId != null and linkId !=''">

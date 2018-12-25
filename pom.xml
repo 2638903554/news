@@ -70,6 +70,7 @@
 
   <build>
     <finalName>news</finalName>
+
     <resources>
       <resource>
           <directory>src/main/java</directory>
@@ -79,6 +80,7 @@
           <filtering>true</filtering>
       </resource>
     </resources>
+      
     <pluginManagement>
       <plugins>
         <plugin>

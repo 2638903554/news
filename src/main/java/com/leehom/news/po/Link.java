@@ -1,7 +1,6 @@
 package com.leehom.news.po;
 
 import lombok.Data;
-
 import java.util.Date;
 
 @Data
