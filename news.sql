@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.24, for macos10.14 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.24, for Linux (x86_64)
 --
 -- Host: localhost    Database: news
 -- ------------------------------------------------------
--- Server version	5.7.24
+-- Server version	5.7.24-0ubuntu0.16.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `detail`
+--
+
+DROP TABLE IF EXISTS `detail`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `detail` (
+  `detail_id` int(11) NOT NULL AUTO_INCREMENT,
+  `detail_name` varchar(50) DEFAULT NULL,
+  `news_id` int(11) NOT NULL DEFAULT '15',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`detail_id`),
+  KEY `NewsTypeId` (`news_id`),
+  CONSTRAINT `detail_ibfk_1` FOREIGN KEY (`news_id`) REFERENCES `type` (`type_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `detail`
+--
+
+LOCK TABLES `detail` WRITE;
+/*!40000 ALTER TABLE `detail` DISABLE KEYS */;
+INSERT INTO `detail` VALUES (38,'足球',15,'2018-05-09 20:14:10'),(42,'电影',42,'2018-05-09 21:12:10'),(43,'明星',42,'2018-05-09 21:14:10'),(47,'股票',43,'2018-05-09 23:12:10'),(48,'基金',43,'2018-05-09 23:16:10'),(55,'篮球',15,'2018-05-09 23:29:59');
+/*!40000 ALTER TABLE `detail` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `link`
 --
 
@@ -25,7 +53,7 @@ DROP TABLE IF EXISTS `link`;
 CREATE TABLE `link` (
   `link_id` int(11) NOT NULL AUTO_INCREMENT,
   `link_name` varchar(50) DEFAULT NULL,
-  `link_address` varchar(50) DEFAULT NULL,
+  `link_url` varchar(50) DEFAULT NULL,
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`link_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
@@ -53,10 +81,10 @@ CREATE TABLE `manager` (
   `manager_username` varchar(50) DEFAULT NULL,
   `manager_password` varchar(50) DEFAULT NULL,
   `manager_nickname` varchar(50) DEFAULT NULL,
-  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `manager_mark` int(11) DEFAULT '0' COMMENT '''0''普通管理员\n''1''超级管理员',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`manager_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +93,7 @@ CREATE TABLE `manager` (
 
 LOCK TABLES `manager` WRITE;
 /*!40000 ALTER TABLE `manager` DISABLE KEYS */;
-INSERT INTO `manager` VALUES (1,'szpt','123456','mingri','2018-05-09 11:12:10',1),(24,'lisi','111','李六','2018-05-09 14:12:10',0),(33,'tom','123','汤姆','2018-05-09 16:12:16',0),(34,'516','123456','李四','2018-05-09 18:12:10',0);
+INSERT INTO `manager` VALUES (1,'szpt','123456','mingri',1,'2018-05-09 11:12:10'),(24,'lisi','111','李六',0,'2018-05-09 14:12:10'),(33,'tom','123','汤姆',0,'2018-05-09 16:12:16'),(34,'516','123456','李四',0,'2018-05-09 18:12:10');
 /*!40000 ALTER TABLE `manager` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -80,11 +108,11 @@ CREATE TABLE `news` (
   `news_id` int(11) NOT NULL AUTO_INCREMENT,
   `news_title` varchar(100) DEFAULT NULL,
   `news_content` longtext,
-  `style_id` int(11) NOT NULL DEFAULT '37',
+  `detail_id` int(11) NOT NULL DEFAULT '37',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`news_id`),
-  KEY `StyleId` (`style_id`),
-  CONSTRAINT `news_ibfk_1` FOREIGN KEY (`style_id`) REFERENCES detail (detail_id)
+  KEY `StyleId` (`detail_id`),
+  CONSTRAINT `news_ibfk_1` FOREIGN KEY (`detail_id`) REFERENCES `detail` (`detail_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -99,13 +127,13 @@ INSERT INTO `news` VALUES (1,'小法：若无缘欧冠，只能怪我们浪费�
 UNLOCK TABLES;
 
 --
--- Table structure for table `newstype`
+-- Table structure for table `type`
 --
 
-DROP TABLE IF EXISTS type;
+DROP TABLE IF EXISTS `type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `newstype` (
+CREATE TABLE `type` (
   `type_id` int(11) NOT NULL AUTO_INCREMENT,
   `type_name` varchar(50) DEFAULT NULL,
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -114,41 +142,13 @@ CREATE TABLE `newstype` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `newstype`
+-- Dumping data for table `type`
 --
 
-LOCK TABLES type WRITE;
-/*!40000 ALTER TABLE type DISABLE KEYS */;
-INSERT INTO type VALUES (15,'体育','2018-05-09 12:12:10'),(42,'娱乐','2018-05-09 14:12:10'),(43,'财经','2018-05-09 16:12:10');
-/*!40000 ALTER TABLE type ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `style`
---
-
-DROP TABLE IF EXISTS detail;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `style` (
-  `style_id` int(11) NOT NULL AUTO_INCREMENT,
-  `style_name` varchar(50) DEFAULT NULL,
-  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `news_id` int(11) NOT NULL DEFAULT '15',
-  PRIMARY KEY (`style_id`),
-  KEY `NewsTypeId` (`news_id`),
-  CONSTRAINT `style_ibfk_1` FOREIGN KEY (`news_id`) REFERENCES type (`type_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `style`
---
-
-LOCK TABLES detail WRITE;
-/*!40000 ALTER TABLE detail DISABLE KEYS */;
-INSERT INTO detail VALUES (38,'足球','2018-05-09 20:14:10',15),(42,'电影','2018-05-09 21:12:10',42),(43,'明星','2018-05-09 21:14:10',42),(47,'股票','2018-05-09 23:12:10',43),(48,'基金','2018-05-09 23:16:10',43),(55,'篮球','2018-05-09 23:29:59',15);
-/*!40000 ALTER TABLE detail ENABLE KEYS */;
+LOCK TABLES `type` WRITE;
+/*!40000 ALTER TABLE `type` DISABLE KEYS */;
+INSERT INTO `type` VALUES (15,'体育','2018-05-09 12:12:10'),(42,'娱乐','2018-05-09 14:12:10'),(43,'财经','2018-05-09 16:12:10');
+/*!40000 ALTER TABLE `type` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -165,9 +165,9 @@ CREATE TABLE `vote` (
   `vote_age` int(11) DEFAULT NULL,
   `vote_job` varchar(50) DEFAULT NULL,
   `vote_remark` varchar(200) DEFAULT NULL,
-  `vote_number` int(11) DEFAULT NULL,
+  `vote_number` int(11) DEFAULT '0',
   PRIMARY KEY (`vote_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -176,7 +176,7 @@ CREATE TABLE `vote` (
 
 LOCK TABLES `vote` WRITE;
 /*!40000 ALTER TABLE `vote` DISABLE KEYS */;
-INSERT INTO `vote` VALUES (9,'吴敏霞','上海',33,'跳水','相比于高敏、伏明霞和郭晶晶等前几任跳水“一姐”，吴敏霞似乎少了那么点霸气、才气与灵气，但她身上所独有的静气却也非其他几位跳水“一姐”所能及。事实上，也正是这一份静气，成就了吴敏霞今日的一切。',20),(11,'龙清泉','湖南',28,'男子举重','他天赋过人，悟性极高，抓举和挺举均衡，技术和力量融合完美',15),(13,'孙杨','浙江',27,'游泳','中国需要在本土之外证明自己的实力……中国有很多优秀的运动员，他们表现出了自己的潜力，比如孙杨，在游泳世界杯的时候就引起了我的关注，也势必会引起世界的关注。',6);
+INSERT INTO `vote` VALUES (9,'吴敏霞','上海',33,'跳水','相比于高敏、伏明霞和郭晶晶等前几任跳水“一姐”，吴敏霞似乎少了那么点霸气、才气与灵气，但她身上所独有的静气却也非其他几位跳水“一姐”所能及。事实上，也正是这一份静气，成就了吴敏霞今日的一切。',20),(11,'龙清泉','湖南',28,'男子举重','他天赋过人，悟性极高，抓举和挺举均衡，技术和力量融合完美',15),(13,'孙杨','浙江',27,'游泳','中国需要在本土之外证明自己的实力……中国有很多优秀的运动员，他们表现出了自己的潜力，比如孙杨，在游泳世界杯的时候就引起了我的关注，也势必会引起世界的关注。',6),(14,'leehom','深职院北校区',21,'student','hehe',12),(15,'zou','深职院北校区',21,'student','hehe',24);
 /*!40000 ALTER TABLE `vote` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -189,4 +189,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-24 19:28:19
+-- Dump completed on 2018-12-25  8:10:26
