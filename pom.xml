@@ -85,21 +85,21 @@
           <artifactId>standard</artifactId>
           <version>1.1.2</version>
       </dependency>
-      <dependency>
-          <groupId>jstl</groupId>
-          <artifactId>jstl</artifactId>
-          <version>1.2</version>
-      </dependency>
+      <!--<dependency>-->
+          <!--<groupId>jstl</groupId>-->
+          <!--<artifactId>jstl</artifactId>-->
+          <!--<version>1.2</version>-->
+      <!--</dependency>-->
       <dependency>
           <groupId>com.fasterxml.jackson.core</groupId>
           <artifactId>jackson-databind</artifactId>
           <version>2.5.4</version>
       </dependency>
-      <dependency>
-          <groupId>javax.servlet</groupId>
-          <artifactId>javax.servlet-api</artifactId>
-          <version>3.1.0</version>
-      </dependency>
+      <!--<dependency>-->
+          <!--<groupId>javax.servlet</groupId>-->
+          <!--<artifactId>javax.servlet-api</artifactId>-->
+          <!--<version>3.1.0</version>-->
+      <!--</dependency>-->
 
       <!-- 1)Spring核心 -->
       <dependency>
@@ -148,6 +148,13 @@
           <version>4.1.7.RELEASE</version>
       </dependency>
 
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-context-support</artifactId>
+          <version>4.1.7.RELEASE</version>
+      </dependency>
+
+
       <!-- Map工具类 -->
       <dependency>
           <groupId>commons-collections</groupId>
@@ -155,6 +162,11 @@
           <version>3.2</version>
       </dependency>
 
+      <dependency>
+          <groupId>org.freemarker</groupId>
+          <artifactId>freemarker</artifactId>
+          <version>2.3.20</version>
+      </dependency>
 
   </dependencies>
 
