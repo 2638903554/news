@@ -1,9 +1,14 @@
 package com.leehom.news.service;
 
 import com.leehom.news.dao.NewsDao;
+import com.leehom.news.dto.NewsDto;
+import com.leehom.news.po.News;
 
-public class NewsService {
+public interface NewsService {
 
-    private NewsDao newsDao;
+
+    News selectByNewsId(Integer newsId);
+
+    NewsDto selectAll();
 
 }

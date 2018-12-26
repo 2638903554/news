@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.leehom.news.dao.NewsDao">
-    <!--<select id="selectNewsByDetailId" resultType="News">-->
-        <!--SELECT * FROM news where detail_id = #{detailId}-->
-    <!--</select>-->
 
-    <!--<select id="selectNewsByTypeId" resultType="News">-->
-        <!--select d.detail_name, n.news_title,n.news_content FROM detail d-->
-            <!--INNER JOIN news n on n.detail_id = d.detail_id-->
-        <!--WHERE type_id = #{typeId}-->
-    <!--</select>-->
+    <select id="selectByNewsId" resultType="News">
+        select * from news where news_id = #{newsId}
+    </select>
 
-
-    <!--<select id="selectByKeyWord" resultType="News">-->
-        <!--select * from news where detail_id = #{detailId} and news_title like '%${keyWord}%'-->
-    <!--</select>-->
+    <select id="selectAll" resultType="News">
+        select * from news
+    </select>
 
 </mapper>
