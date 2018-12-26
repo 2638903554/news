@@ -9,8 +9,7 @@ service层负责业务模块的应用逻辑，需要先设计接口(xxxxService.
 controller层负责具体的业务模块流程的控制，在此层要调用service层的接口来控制业务流程.
 其中controller的配置文件可参考spring-mvc.xml
 ### dto
-### enums
-### exception
+
 ### po
 
 
