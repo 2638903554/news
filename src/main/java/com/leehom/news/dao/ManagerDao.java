@@ -5,14 +5,14 @@ import java.util.List;
 
 public interface ManagerDao {
 
-    Manager selectManagerById(Integer managerId);
-
-    List<Manager> selectAll();
-
-    int insertManager(Manager manager);
-
-    int updateManager(Manager manager);
-
-    int deleteManagerById(Integer managerId);
+//    Manager selectManagerById(Integer managerId);
+//
+//    List<Manager> selectAll();
+//
+//    int insertManager(Manager manager);
+//
+//    int updateManager(Manager manager);
+//
+//    int deleteManagerById(Integer managerId);
 
 }

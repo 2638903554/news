@@ -1,27 +1,20 @@
 package com.leehom.news.dao;
 
 import com.leehom.news.po.Detail;
-import org.apache.ibatis.session.SqlSession;
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.List;
+public class DetailDaoTest extends BaseTest {
 
-import static org.junit.Assert.*;
-
-public class DetailDaoTest extends BaseDaoTest {
+    @Autowired
+    private DetailDao detailDao;
 
     @Test
-    public void selectDetailListByTypeIdTest() throws Exception {
-        SqlSession sqlSession = getSqlSession();
-        try{
-            DetailDao detailDao = sqlSession.getMapper(DetailDao.class);
-            List<Detail> detailList = detailDao.selectDetailListByTypeId(15);
-            Assert.assertNotNull(detailList);
-            Assert.assertTrue(detailList.size()>0);
-        }finally {
-            sqlSession.close();
-        }
+    public void selectByDetailIdTest(){
+        Detail detail = detailDao.selectByDetailId(38);
+        Assert.assertNotNull(detail);
+
     }
 
 }

@@ -8,4 +8,6 @@ public interface DetailDao {
 
     List<Detail> selectDetailListByTypeId(Integer typeId);
 
+    Detail selectByDetailId(Integer detailId);
+
 }

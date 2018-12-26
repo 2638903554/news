@@ -5,10 +5,10 @@ import java.util.List;
 
 public interface LinkDao {
 
-    Link selectLinkById(Integer linkId);
-
-    List<Link> selectAll();
-
-    Link selectByLink(Link link);
+//    Link selectLinkById(Integer linkId);
+//
+//    List<Link> selectAll();
+//
+//    Link selectByLink(Link link);
 
 }

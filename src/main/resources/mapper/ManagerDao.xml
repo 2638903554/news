@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leehom.news.dao.ManagerDao">
+
+    <!--<select id="selectManagerById" resultType="Manager">-->
+        <!--SELECT * FROM manager WHERE manager_id = #{managerId}-->
+    <!--</select>-->
+
+    <!--<select id="selectAll" resultType="Manager">-->
+        <!--SELECT * FROM manager-->
+    <!--</select>-->
+
+    <!--<insert id="insertManager">-->
+        <!--INSERT INTO manager(-->
+          <!--manager_username, manager_password, manager_nickname,manager_mark-->
+        <!--) VALUES (-->
+          <!--#{managerUsername},#{managerPassword},-->
+          <!--#{managerNickname},#{managerMark}-->
+        <!--)-->
+    <!--</insert>-->
+
+    <!--<delete id="deleteManagerById">-->
+        <!--DELETE FROM manager WHERE manager_id=#{managerId}-->
+    <!--</delete>-->
+
+    <!--<update id="updateManager">-->
+        <!--UPDATE manager SET-->
+            <!--manager_username = #{managerUsername},-->
+            <!--manager_password = #{managerPassword},-->
+            <!--manager_nickname = #{managerNickname},-->
+            <!--manager_mark = #{managerMark},-->
+            <!--create_time = #{createTime,jdbcType=TIMESTAMP}-->
+        <!--WHERE manager_id = #{managerId}-->
+    <!--</update>-->
+
+</mapper>
