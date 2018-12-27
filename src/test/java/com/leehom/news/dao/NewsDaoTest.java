@@ -1,5 +1,6 @@
 package com.leehom.news.dao;
 
+import com.leehom.news.dto.NewsDto;
 import com.leehom.news.po.News;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -24,9 +25,23 @@ public class NewsDaoTest extends BaseTest {
 
     @Test
     public void selectAllTest(){
-        List<News> newsList = newsDao.selectAll();
-        Assert.assertNotNull(newsList);
-        Assert.assertTrue(newsList.size() > 0);
+        List<NewsDto> newsDtoList = newsDao.selectAll();
+        Assert.assertNotNull(newsDtoList);
+        Assert.assertTrue(newsDtoList.size() > 0);
+    }
+
+    @Test
+    public void selectNewsByTypeIdAndKeyWord(){
+        List<NewsDto> newsDtoList = newsDao.selectNewsByTypeIdAndKeyWord(15,"小");
+        Assert.assertNotNull(newsDtoList);
+        Assert.assertTrue(newsDtoList.size() > 0);
+    }
+
+    @Test
+    public void selectNewsByTypeIdTest(){
+        List<NewsDto> newsDtoList = newsDao.selectThreeNewsByTypeId(15);
+        Assert.assertNotNull(newsDtoList);
+        Assert.assertTrue(newsDtoList.size()>0);
     }
 
 }

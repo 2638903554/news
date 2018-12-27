@@ -2,5 +2,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.leehom.news.dao.TypeDao">
+    <select id="selectAll" resultType="Type">
+        SELECT * FROM type
+    </select>
 
+    <select id="selectTypeById" resultType="Type">
+        SELECT * FROM type WHERE type_id = #{typeId}
+    </select>
+
+    <update id="updateTypeById">
+        UPDATE type
+        set type_name = #{typeName}
+        WHERE type_id = #{typeId}
+    </update>
+
+    <delete id="deleteTypeById">
+        DELETE FROM type WHERE type_id = #{typeId}
+    </delete>
+
+    <insert id="insertTypeById">
+        INSERT INTO type
+          (type_name)
+        VALUES
+            (#{typeName})
+    </insert>
 </mapper>

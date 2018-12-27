@@ -1,12 +1,12 @@
 package com.leehom.news.dto;
-
-import com.leehom.news.po.News;
 import lombok.Data;
+import java.util.Date;
 
 @Data
 public class NewsDto {
 
-    private News news;
+    private Integer newsId;
+    private String newsTitle;
     private String detailName;
-
+    private Date createTime;
 }

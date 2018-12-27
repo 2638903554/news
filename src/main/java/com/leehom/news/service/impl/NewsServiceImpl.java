@@ -7,6 +7,8 @@ import com.leehom.news.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class NewsServiceImpl implements NewsService {
 
@@ -19,8 +21,27 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Override
-    public NewsDto selectAll() {
+    public List<NewsDto> selectAll() {
+        return newsDao.selectAll();
+    }
 
-        return null;
+    @Override
+    public List<NewsDto> selectNewsByTypeIdAndKeyWord(Integer typeId, String newsTitle) {
+        return newsDao.selectNewsByTypeIdAndKeyWord(typeId,newsTitle);
+    }
+
+    @Override
+    public List<NewsDto> selectAllByNewsId(Integer newsId) {
+        return newsDao.selectAllByNewsId(newsId);
+    }
+
+    @Override
+    public List<NewsDto> selectThreeNewsByTypeId(Integer typeId) {
+        return newsDao.selectThreeNewsByTypeId(typeId);
+    }
+
+    @Override
+    public List<NewsDto> selectNewsByTypeId(Integer typeId) {
+        return newsDao.selectNewsByTypeId(typeId);
     }
 }
