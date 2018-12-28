@@ -20,7 +20,7 @@ public class TypeServiceImplTest extends BaseTest {
     public void insertTypeByIdTest(){
         Type type = new Type();
         type.setTypeName("教育");
-        int result = typeService.insertTypeById(type);
+        int result = typeService.insertType(type);
         Assert.assertTrue(1==result);
     }
 
@@ -47,7 +47,7 @@ public class TypeServiceImplTest extends BaseTest {
     public void updateTypeByIdTest(){
         Type type = typeService.selectTypeById(46);
         type.setTypeName("实验");
-        int result = typeService.updateTypeById(type);
+        int result = typeService.updateType(type);
         Assert.assertTrue(1==result);
     }
 

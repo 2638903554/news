@@ -6,6 +6,10 @@ import java.util.List;
 
 public interface LinkService {
 
+    int insertLink(Link link);
+
+    
+
     List<Link> selectAll();
 
 }

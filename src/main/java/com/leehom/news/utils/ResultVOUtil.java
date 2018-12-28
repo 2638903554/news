@@ -8,7 +8,7 @@ public class ResultVOUtil {
         ResultVO resultVO = new ResultVO();
         resultVO.setData(object);
         resultVO.setCode(0);
-        resultVO.setMsg("成功");
+        resultVO.setMsg("操作成功");
         return resultVO;
     }
 

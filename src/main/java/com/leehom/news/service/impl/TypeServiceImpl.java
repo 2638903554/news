@@ -22,7 +22,7 @@ public class TypeServiceImpl implements TypeService {
     private DetailDao detailDao;
 
     @Override
-    public int insertTypeById(Type type) {
+    public int insertType(Type type) {
         return typeDao.insertTypeById(type);
     }
 
@@ -46,11 +46,16 @@ public class TypeServiceImpl implements TypeService {
 
     @Override
     public Type selectTypeById(Integer typeId) {
+        try {
+           Type type = typeDao.selectTypeById(typeId);
+        }catch (NewsException e){
+            throw new NewsException(ResultEnum.TYPEID_ERROR);
+        }
         return typeDao.selectTypeById(typeId);
     }
 
     @Override
-    public int updateTypeById(Type type) {
+    public int updateType(Type type) {
         return typeDao.updateTypeById(type);
     }
 

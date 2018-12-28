@@ -9,10 +9,10 @@ public interface TypeService {
 
     Type selectTypeById(Integer typeId);
 
-    int updateTypeById(Type type);
+    int updateType(Type type);
 
     int deleteTypeById(Integer typeId);
 
-    int insertTypeById(Type type);
+    int insertType(Type type);
 
 }
