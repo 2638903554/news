@@ -16,35 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `detail`
---
-
-DROP TABLE IF EXISTS `detail`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `detail` (
-  `detail_id` int(11) NOT NULL AUTO_INCREMENT,
-  `detail_name` varchar(50) NOT NULL DEFAULT '',
-  `type_id` int(11) NOT NULL DEFAULT '15',
-  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`detail_id`),
-  KEY `NewsTypeId` (`type_id`),
-  CONSTRAINT `detail_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `type` (`type_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `detail`
---
-
-LOCK TABLES `detail` WRITE;
-/*!40000 ALTER TABLE `detail` DISABLE KEYS */;
-INSERT INTO `detail` VALUES (38,'足球',15,'2018-05-09 12:14:10','2018-12-28 16:03:57'),(42,'电影',42,'2018-05-09 13:12:10','2018-12-28 16:03:57'),(43,'明星',42,'2018-05-09 13:14:10','2018-12-28 16:03:57'),(47,'股票',43,'2018-05-09 15:12:10','2018-12-28 16:03:57'),(48,'基金',43,'2018-05-09 15:16:10','2018-12-28 16:03:57'),(55,'篮球',15,'2018-05-09 15:29:59','2018-12-28 16:03:57');
-/*!40000 ALTER TABLE `detail` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `link`
 --
 
@@ -101,6 +72,32 @@ INSERT INTO `manager` VALUES (1,'szpt','123456','mingri',1,'2018-05-09 03:12:10'
 UNLOCK TABLES;
 
 --
+-- Table structure for table `nav`
+--
+
+DROP TABLE IF EXISTS `nav`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `nav` (
+  `type_id` int(11) NOT NULL AUTO_INCREMENT,
+  `type_name` varchar(50) NOT NULL DEFAULT '',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`type_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `nav`
+--
+
+LOCK TABLES `nav` WRITE;
+/*!40000 ALTER TABLE `nav` DISABLE KEYS */;
+INSERT INTO `nav` VALUES (15,'体育','2018-05-09 04:12:10','2018-12-28 16:02:10'),(42,'娱乐','2018-05-09 06:12:10','2018-12-28 16:02:10'),(43,'财经','2018-05-09 08:12:10','2018-12-28 16:02:10');
+/*!40000 ALTER TABLE `nav` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `news`
 --
 
@@ -116,7 +113,7 @@ CREATE TABLE `news` (
   `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`news_id`),
   KEY `StyleId` (`detail_id`),
-  CONSTRAINT `news_ibfk_1` FOREIGN KEY (`detail_id`) REFERENCES `detail` (`detail_id`)
+  CONSTRAINT `news_ibfk_1` FOREIGN KEY (`detail_id`) REFERENCES `subnav` (`detail_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -131,29 +128,32 @@ INSERT INTO `news` VALUES (1,'小法：若无缘欧冠，只能怪我们浪费�
 UNLOCK TABLES;
 
 --
--- Table structure for table `type`
+-- Table structure for table `subnav`
 --
 
-DROP TABLE IF EXISTS `type`;
+DROP TABLE IF EXISTS `subnav`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `type` (
-  `type_id` int(11) NOT NULL AUTO_INCREMENT,
-  `type_name` varchar(50) NOT NULL DEFAULT '',
+CREATE TABLE `subnav` (
+  `detail_id` int(11) NOT NULL AUTO_INCREMENT,
+  `detail_name` varchar(50) NOT NULL DEFAULT '',
+  `type_id` int(11) NOT NULL DEFAULT '15',
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`type_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`detail_id`),
+  KEY `NewsTypeId` (`type_id`),
+  CONSTRAINT `subnav_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `nav` (`type_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `type`
+-- Dumping data for table `subnav`
 --
 
-LOCK TABLES `type` WRITE;
-/*!40000 ALTER TABLE `type` DISABLE KEYS */;
-INSERT INTO `type` VALUES (15,'体育','2018-05-09 04:12:10','2018-12-28 16:02:10'),(42,'娱乐','2018-05-09 06:12:10','2018-12-28 16:02:10'),(43,'财经','2018-05-09 08:12:10','2018-12-28 16:02:10');
-/*!40000 ALTER TABLE `type` ENABLE KEYS */;
+LOCK TABLES `subnav` WRITE;
+/*!40000 ALTER TABLE `subnav` DISABLE KEYS */;
+INSERT INTO `subnav` VALUES (38,'足球',15,'2018-05-09 12:14:10','2018-12-28 16:03:57'),(42,'电影',42,'2018-05-09 13:12:10','2018-12-28 16:03:57'),(43,'明星',42,'2018-05-09 13:14:10','2018-12-28 16:03:57'),(47,'股票',43,'2018-05-09 15:12:10','2018-12-28 16:03:57'),(48,'基金',43,'2018-05-09 15:16:10','2018-12-28 16:03:57'),(55,'篮球',15,'2018-05-09 15:29:59','2018-12-28 16:03:57');
+/*!40000 ALTER TABLE `subnav` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -225,4 +225,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-29  0:23:57
+-- Dump completed on 2018-12-29  0:29:02
