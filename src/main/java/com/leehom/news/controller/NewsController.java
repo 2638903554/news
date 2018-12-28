@@ -18,7 +18,7 @@ import java.util.Map;
 
 @Controller
 @Slf4j
-@RequestMapping(value = "/news/news/")
+@RequestMapping(value = "/news/index/news")
 public class NewsController {
 
     @Autowired

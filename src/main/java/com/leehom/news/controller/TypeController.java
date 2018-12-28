@@ -16,14 +16,11 @@ import java.util.Map;
 
 @Controller
 @Slf4j
-@RequestMapping(value = "/news/type")
+@RequestMapping(value = "/news/index/type")
 public class TypeController {
 
     @Autowired
     private TypeService typeService;
-
-    @Autowired
-    private NewsService newsService;
 
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     public ModelAndView list(Map<String,Object> map){

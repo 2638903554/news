@@ -17,6 +17,20 @@ public class TypeServiceImplTest extends BaseTest {
     private TypeService typeService;
 
     @Test
+    public void insertTypeByIdTest(){
+        Type type = new Type();
+        type.setTypeName("教育");
+        int result = typeService.insertTypeById(type);
+        Assert.assertTrue(1==result);
+    }
+
+    @Test
+    public void deleteTypeByIdTest(){
+        int result = typeService.deleteTypeById(45);
+        Assert.assertTrue(1==result);
+    }
+
+    @Test
     public void selectAll() throws Exception {
         List<Type> typeList = typeService.selectAll();
         Assert.assertNotNull(typeList);
@@ -24,8 +38,16 @@ public class TypeServiceImplTest extends BaseTest {
     }
 
     @Test
-    public void deleteTypeByIdTest(){
-        int result = typeService.deleteTypeById(45);
+    public void selectTypeByIdTest(){
+        Type type = typeService.selectTypeById(15);
+        Assert.assertNotNull(type);
+    }
+
+    @Test
+    public void updateTypeByIdTest(){
+        Type type = typeService.selectTypeById(46);
+        type.setTypeName("实验");
+        int result = typeService.updateTypeById(type);
         Assert.assertTrue(1==result);
     }
 

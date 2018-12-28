@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping(value = "/news/link")
+@RequestMapping(value = "/news/index/link")
 public class LinkController {
 
     @Autowired

@@ -5,8 +5,10 @@ import lombok.Getter;
 @Getter
 public enum ResultEnum implements CodeEnum {
 
-    detail_not_null(1,"该一级类别下有二级类别"),
-    delete_type_error(2,"删除一级类别失败"),
+    DETAIL_NOT_NULL(1,"该一级类别下有二级类别"),
+    DELETE_TYPE_ERROR(2,"删除一级类别失败"),
+    DELETE_TYPE_SUCCESS(3,"删除一级类别成功"),
+
     ;
 
 

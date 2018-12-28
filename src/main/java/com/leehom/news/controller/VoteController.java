@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-@RequestMapping(value = "/news/vote")
+@RequestMapping(value = "/news/index/vote")
 public class VoteController {
 
     @Autowired

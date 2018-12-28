@@ -22,6 +22,24 @@ public class TypeServiceImpl implements TypeService {
     private DetailDao detailDao;
 
     @Override
+    public int insertTypeById(Type type) {
+        return typeDao.insertTypeById(type);
+    }
+
+    @Override
+    public int deleteTypeById(Integer typeId) {
+        List<Detail> detailList = detailDao.selectDetailListByTypeId(typeId);
+        if(0 != detailList.size()){
+            throw new NewsException(ResultEnum.DETAIL_NOT_NULL);
+        }
+        int result = typeDao.deleteTypeById(typeId);
+        if(result != 1){
+            throw new NewsException(ResultEnum.DELETE_TYPE_ERROR);
+        }
+        return result;
+    }
+
+    @Override
     public List<Type> selectAll() {
         return typeDao.selectAll();
     }
@@ -36,21 +54,7 @@ public class TypeServiceImpl implements TypeService {
         return typeDao.updateTypeById(type);
     }
 
-    @Override
-    public int deleteTypeById(Integer typeId) {
-        List<Detail> detailList = detailDao.selectDetailListByTypeId(typeId);
-        if(0 != detailList.size()){
-            throw new NewsException(ResultEnum.detail_not_null);
-        }
-        int result = typeDao.deleteTypeById(typeId);
-        if(result != 1){
-            throw new NewsException(ResultEnum.delete_type_error);
-        }
-        return result;
-    }
 
-    @Override
-    public int insertTypeById(Type type) {
-        return typeDao.insertTypeById(type);
-    }
+
+
 }
