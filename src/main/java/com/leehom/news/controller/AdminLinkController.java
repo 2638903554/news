@@ -15,14 +15,14 @@ public class AdminLinkController {
     @Autowired
     private LinkService linkService;
 
-    @PostMapping(value = "/insert")
-    public ResultVO insert(@RequestParam("linkName") String linkName,
-                           @RequestParam("linkUrl") String linkUrl){
-        Link link = new Link();
-        link.setLinkName(linkName);
-        link.setLinkUrl(linkUrl);
-
-
-    }
+//    @PostMapping(value = "/insert")
+//    public ResultVO insert(@RequestParam("linkName") String linkName,
+//                           @RequestParam("linkUrl") String linkUrl){
+//        Link link = new Link();
+//        link.setLinkName(linkName);
+//        link.setLinkUrl(linkUrl);
+//
+//
+//    }
 
 }

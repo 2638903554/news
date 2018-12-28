@@ -7,9 +7,16 @@ import java.util.Date;
 public class Manager {
 
     private Integer managerId;
+
     private String managerUsername;
+
     private String managerPassword;
+
     private String managerNickname;
+
     private Integer managerMark;
+
     private Date createTime;
+
+    private Date updateTime;
 }

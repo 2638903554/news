@@ -9,4 +9,6 @@ public class Link {
     private String linkName;
     private String linkUrl;
     private Date createTime;
+    private Date updateTime;
+
 }

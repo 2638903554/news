@@ -7,9 +7,15 @@ import java.util.Date;
 public class News {
 
     private Integer newsId;
+
     private String newsTitle;
+
     private String newsContent;
+
     private Integer detailId;
+
     private Date createTime;
+
+    private Date updateTime;
 
 }

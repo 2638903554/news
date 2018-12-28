@@ -13,9 +13,26 @@ import static org.junit.Assert.*;
 
 public class LinkServiceImplTest extends BaseTest {
 
+    public static Integer LINKID = 16;
 
     @Autowired
     private LinkService linkService;
+
+    @Test
+    public void insertLinkTest(){
+        Link link = new Link();
+        link.setLinkName("ins");
+        link.setLinkUrl("http://ins.cn");
+        int result = linkService.insertLink(link);
+        Assert.assertTrue(1==result);
+    }
+
+    @Test
+    public void deleteLinkByIdTest(){
+        int result = linkService.deleteLinkById(LINKID);
+        Assert.assertTrue(1 == result);
+
+    }
 
     @Test
     public void selectAllTest() {
@@ -23,4 +40,20 @@ public class LinkServiceImplTest extends BaseTest {
         Assert.assertNotNull(linkList);
         Assert.assertTrue(linkList.size()>0);
     }
+
+    @Test
+    public void selectLinkByIdTest(){
+        Link link = linkService.selectLinkById(LINKID);
+        Assert.assertNotNull(link);
+    }
+
+    @Test
+    public void updateLinkTest(){
+        Link link = linkService.selectLinkById(LINKID);
+        link.setLinkName("深圳大学");
+        link.setLinkUrl("https://www.szpt.edu.cn");
+        int result = linkService.updateLink(link);
+        Assert.assertTrue(1 == result);
+    }
+
 }

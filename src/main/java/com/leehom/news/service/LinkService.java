@@ -8,8 +8,12 @@ public interface LinkService {
 
     int insertLink(Link link);
 
-    
+    int deleteLinkById(Integer linkId);
+
+    Link selectLinkById(Integer linkId);
 
     List<Link> selectAll();
+
+    int updateLink(Link link);
 
 }

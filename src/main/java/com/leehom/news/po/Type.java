@@ -9,7 +9,11 @@ import java.util.Date;
 public class Type {
 
     private Integer typeId;
+
     private String typeName;
+
     private Date creatTime;
+
+    private Date updateTime;
 
 }
