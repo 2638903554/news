@@ -6,16 +6,34 @@ import java.util.Date;
 @Data
 public class News {
 
+    /**
+     * 新闻id
+     */
     private Integer newsId;
 
+    /**
+     * 新闻标题
+     */
     private String newsTitle;
 
+    /**
+     * 新闻内容
+     */
     private String newsContent;
 
-    private Integer detailId;
+    /**
+     * 该新闻数据所对应的二级导航的id
+     */
+    private Integer subnavId;
 
+    /**
+     * 创建时间
+     */
     private Date createTime;
 
+    /**
+     * 更新时间
+     */
     private Date updateTime;
 
 }

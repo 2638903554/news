@@ -7,23 +7,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f72e75f1-8c8d-4eb8-9527-ccd11ac431fe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminNavController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/NavService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/SubnavService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/NavServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/SubnavServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/leehom/news/dao/NavDaoTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminTypeController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/DetailService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/TypeService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/DetailServiceImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/TypeServiceImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/leehom/news/dao/TypeDaoTest.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/TypeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/NavController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/VoteController.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/NewsmakerController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/DetailDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/SubnavDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/TypeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/NavDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/VoteDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/NewsmakerDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Detail.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Subnav.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Type.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Nav.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Vote.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Newsmaker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/VoteService.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/NewsmakerService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/VoteServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/NewsmakerServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/DetailDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SubnavDao.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/TypeDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/NavDao.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/VoteDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/NewsmakerDao.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/leehom/news/dao/DetailDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/leehom/news/dao/SubnavDaoTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/leehom/news/dao/VoteDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/leehom/news/dao/NewsmakerDaoTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/DetailServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/SubnavServiceImplTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/TypeServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/NavServiceImplTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/VoteServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/NewsmakerServiceImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2b4a38a1-cbe0-4d96-9cd6-05f6f837f158.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/2b4a38a1-cbe0-4d96-9cd6-05f6f837f158.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news.iml" afterPath="$PROJECT_DIR$/news.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminLinkController.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminLinkController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Detail.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Detail.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/LinkController.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/LinkController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/NewsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/NewsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/LinkDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/LinkDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/enums/ResultEnum.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/enums/ResultEnum.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Link.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Link.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Manager.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Manager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/News.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/News.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Type.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Type.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Vote.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Vote.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/LinkService.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/LinkService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/LinkServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/LinkServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/LinkServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/LinkServiceImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/leehom/news/po/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/NewsDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/NewsDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/vote.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/vote.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -129,7 +156,80 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="NewsmakerDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/dao/NewsmakerDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="40" column="23" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/service/NewsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminNavController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminNavController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NavServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/NavServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NavDaoTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/leehom/news/dao/NavDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1056">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsmakerDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/NewsmakerDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="64" lean-forward="false" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+              <folding>
+                <marker date="1546055348771" expanded="true" signature="253:494" ph="insert into newsmaker... " />
+                <marker date="1546055348771" expanded="true" signature="557:614" ph="DELETE FROM " />
+                <marker date="1546055348771" expanded="true" signature="699:758" ph="SELECT * FRO... newsmaker" />
+                <marker date="1546055348771" expanded="true" signature="833:856" ph="SELECT * FRO... newsmaker" />
+                <marker date="1546055348771" expanded="true" signature="914:1295" ph="UPDATE newsm... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -156,57 +256,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/NewsDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/NewsDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/service/NewsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/NewsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/news.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/type.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/type.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/TypeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminNewsController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/TypeDao.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/leehom/news/dao/TypeDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/DetailDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/DetailDao.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/leehom/news/dao/DetailDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/NewsServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/VoteController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/TypeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/NewsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/LinkController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/error.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/success.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/head.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/type/index.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/utils/DateToLongSerializer.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/type/list.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/nav.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/utils/ResultVoUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/vo/ResultVO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/filter/SimpleCORSFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/utils/ResultVOUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/enums/ResultEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/TypeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/service/TypeService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/TypeServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminTypeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/LinkDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/LinkDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/service/LinkService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/LinkServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminLinkController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/LinkServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Link.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Vote.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Detail.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Manager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/News.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Type.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Link.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Manager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Subnav.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Vote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/SubnavDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/TypeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/DetailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/NewsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminTypeController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/leehom/news/dao/SubnavDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/leehom/news/dao/TypeDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/News.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/NewsDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/SubnavDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/VoteDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/LinkController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/NewsmakerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/NavController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminLinkController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/enums/ResultEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/NavDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/NavDao.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/leehom/news/dao/NavDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/service/NavService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/NavServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/NavServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Nav.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminNavController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/po/Newsmaker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/LinkDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leehom/news/dao/NewsmakerDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/NewsmakerDao.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/leehom/news/dao/NewsmakerDaoTest.java" />
       </list>
     </option>
   </component>
@@ -242,10 +342,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="389" />
-    <option name="y" value="35" />
+    <option name="x" value="265" />
+    <option name="y" value="33" />
     <option name="width" value="1015" />
-    <option name="height" value="704" />
+    <option name="height" value="871" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -278,6 +378,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -318,7 +420,44 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="news" type="b2602c69:ProjectViewProjectNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="news" type="b2602c69:ProjectViewProjectNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
               <item name="po" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="news" type="b2602c69:ProjectViewProjectNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="news" type="b2602c69:ProjectViewProjectNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="news" type="b2602c69:ProjectViewProjectNode" />
@@ -331,6 +470,37 @@
               <item name="news" type="b2602c69:ProjectViewProjectNode" />
               <item name="news" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="news" type="b2602c69:ProjectViewProjectNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="news" type="b2602c69:ProjectViewProjectNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="news" type="b2602c69:ProjectViewProjectNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="news" type="b2602c69:ProjectViewProjectNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -347,6 +517,15 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="news" type="b2602c69:ProjectViewProjectNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="news" type="b2602c69:ProjectViewProjectNode" />
@@ -362,9 +541,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -408,20 +585,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinkServiceImplTest.updateLinkTest">
-    <configuration name="LinkServiceImplTest.deleteLinkByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.NewsmakerDaoTest.deleteNewsmakerByIdTest">
+    <configuration name="NewsmakerDaoTest.deleteNewsmakerByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.leehom.news.service.impl.*" />
+          <option name="PATTERN" value="com.leehom.news.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="news" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.leehom.news.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.leehom.news.service.impl.LinkServiceImplTest" />
-      <option name="METHOD_NAME" value="deleteLinkByIdTest" />
+      <option name="PACKAGE_NAME" value="com.leehom.news.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.leehom.news.dao.NewsmakerDaoTest" />
+      <option name="METHOD_NAME" value="deleteNewsmakerByIdTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -434,19 +611,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="LinkServiceImplTest.insertLinkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NewsmakerDaoTest.insertNewsmakerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.leehom.news.service.impl.*" />
+          <option name="PATTERN" value="com.leehom.news.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="news" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.leehom.news.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.leehom.news.service.impl.LinkServiceImplTest" />
-      <option name="METHOD_NAME" value="insertLinkTest" />
+      <option name="PACKAGE_NAME" value="com.leehom.news.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.leehom.news.dao.NewsmakerDaoTest" />
+      <option name="METHOD_NAME" value="insertNewsmakerTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -459,18 +636,18 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="LinkServiceImplTest.selectAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NewsmakerDaoTest.selectAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.leehom.news.service.impl.*" />
+          <option name="PATTERN" value="com.leehom.news.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="news" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.leehom.news.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.leehom.news.service.impl.LinkServiceImplTest" />
+      <option name="PACKAGE_NAME" value="com.leehom.news.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.leehom.news.dao.NewsmakerDaoTest" />
       <option name="METHOD_NAME" value="selectAllTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
@@ -484,19 +661,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="LinkServiceImplTest.selectLinkByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NewsmakerDaoTest.selectNewsmakerByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.leehom.news.service.impl.*" />
+          <option name="PATTERN" value="com.leehom.news.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="news" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.leehom.news.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.leehom.news.service.impl.LinkServiceImplTest" />
-      <option name="METHOD_NAME" value="selectLinkByIdTest" />
+      <option name="PACKAGE_NAME" value="com.leehom.news.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.leehom.news.dao.NewsmakerDaoTest" />
+      <option name="METHOD_NAME" value="selectNewsmakerByIdTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -509,19 +686,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="LinkServiceImplTest.updateLinkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NewsmakerDaoTest.updateNewsmakerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.leehom.news.service.impl.*" />
+          <option name="PATTERN" value="com.leehom.news.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="news" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.leehom.news.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.leehom.news.service.impl.LinkServiceImplTest" />
-      <option name="METHOD_NAME" value="updateLinkTest" />
+      <option name="PACKAGE_NAME" value="com.leehom.news.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.leehom.news.dao.NewsmakerDaoTest" />
+      <option name="METHOD_NAME" value="updateNewsmakerTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -697,19 +874,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.LinkServiceImplTest.insertLinkTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.LinkServiceImplTest.selectAllTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.LinkServiceImplTest.deleteLinkByIdTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.LinkServiceImplTest.selectLinkByIdTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.LinkServiceImplTest.updateLinkTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.NewsmakerDaoTest.selectAllTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.NewsmakerDaoTest.insertNewsmakerTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.NewsmakerDaoTest.selectNewsmakerByIdTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.NewsmakerDaoTest.updateNewsmakerTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.NewsmakerDaoTest.deleteNewsmakerByIdTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LinkServiceImplTest.updateLinkTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.LinkServiceImplTest.selectLinkByIdTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.LinkServiceImplTest.deleteLinkByIdTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.LinkServiceImplTest.insertLinkTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.LinkServiceImplTest.selectAllTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.NewsmakerDaoTest.deleteNewsmakerByIdTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.NewsmakerDaoTest.updateNewsmakerTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.NewsmakerDaoTest.selectNewsmakerByIdTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.NewsmakerDaoTest.insertNewsmakerTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.NewsmakerDaoTest.selectAllTest" />
       </list>
     </recent_temporary>
   </component>
@@ -743,43 +920,44 @@
       <workItem from="1545907696350" duration="165000" />
       <workItem from="1545912320940" duration="17508000" />
       <workItem from="1546009280777" duration="2642000" />
+      <workItem from="1546043388394" duration="11038000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkServiceImplTest_deleteLinkByIdTest - 2018.12.28 at 23h 40m 17s.xml">
-      <configuration name="LinkServiceImplTest.deleteLinkByIdTest" configurationId="JUnit" />
+    <history-entry file="NavServiceImplTest_selectNavByIdTest - 2018.12.29 at 11h 12m 56s.xml">
+      <configuration name="NavServiceImplTest.selectNavByIdTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkServiceImplTest_insertLinkTest - 2018.12.28 at 23h 04m 40s.xml">
-      <configuration name="LinkServiceImplTest.insertLinkTest" configurationId="JUnit" />
+    <history-entry file="NavServiceImplTest_updateNavTest - 2018.12.29 at 11h 13m 16s.xml">
+      <configuration name="NavServiceImplTest.updateNavTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkServiceImplTest_selectAllTest - 2018.12.28 at 23h 04m 33s.xml">
-      <configuration name="LinkServiceImplTest.selectAllTest" configurationId="JUnit" />
+    <history-entry file="NewsmakerDaoTest_deleteNewsmakerByIdTest - 2018.12.29 at 11h 54m 13s.xml">
+      <configuration name="NewsmakerDaoTest.deleteNewsmakerByIdTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkServiceImplTest_selectLinkByIdTest - 2018.12.28 at 23h 41m 18s.xml">
-      <configuration name="LinkServiceImplTest.selectLinkByIdTest" configurationId="JUnit" />
+    <history-entry file="NewsmakerDaoTest_insertNewsmakerTest - 2018.12.29 at 11h 49m 17s.xml">
+      <configuration name="NewsmakerDaoTest.insertNewsmakerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkServiceImplTest_selectLinkByIdTest - 2018.12.28 at 23h 42m 03s.xml">
-      <configuration name="LinkServiceImplTest.selectLinkByIdTest" configurationId="JUnit" />
+    <history-entry file="NewsmakerDaoTest_insertNewsmakerTest - 2018.12.29 at 11h 50m 03s.xml">
+      <configuration name="NewsmakerDaoTest.insertNewsmakerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkServiceImplTest_updateLinkTest - 2018.12.28 at 23h 43m 45s.xml">
-      <configuration name="LinkServiceImplTest.updateLinkTest" configurationId="JUnit" />
+    <history-entry file="NewsmakerDaoTest_selectAllTest - 2018.12.29 at 11h 30m 16s.xml">
+      <configuration name="NewsmakerDaoTest.selectAllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeServiceImplTest_selectAll - 2018.12.28 at 23h 01m 39s.xml">
-      <configuration name="TypeServiceImplTest.selectAll" configurationId="JUnit" />
+    <history-entry file="NewsmakerDaoTest_selectNewsmakerByIdTest - 2018.12.29 at 11h 51m 57s.xml">
+      <configuration name="NewsmakerDaoTest.selectNewsmakerByIdTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeServiceImplTest_selectAll - 2018.12.28 at 23h 02m 37s.xml">
-      <configuration name="TypeServiceImplTest.selectAll" configurationId="JUnit" />
+    <history-entry file="NewsmakerDaoTest_selectNewsmakerByIdTest - 2018.12.29 at 11h 52m 27s.xml">
+      <configuration name="NewsmakerDaoTest.selectNewsmakerByIdTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeServiceImplTest_selectAll - 2018.12.28 at 23h 04m 23s.xml">
-      <configuration name="TypeServiceImplTest.selectAll" configurationId="JUnit" />
+    <history-entry file="NewsmakerDaoTest_selectNewsmakerByIdTest - 2018.12.29 at 11h 52m 54s.xml">
+      <configuration name="NewsmakerDaoTest.selectNewsmakerByIdTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeServiceImplTest_updateTypeByIdTest - 2018.12.27 at 20h 49m 17s.xml">
-      <configuration name="TypeServiceImplTest.updateTypeByIdTest" configurationId="JUnit" />
+    <history-entry file="NewsmakerDaoTest_updateNewsmakerTest - 2018.12.29 at 11h 53m 54s.xml">
+      <configuration name="NewsmakerDaoTest.updateNewsmakerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86171000" />
+    <option name="totallyTimeSpent" value="97209000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -791,7 +969,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="389" y="35" width="1015" height="704" extended-state="0" />
+    <frame x="265" y="33" width="1015" height="871" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -803,19 +982,20 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.70307165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.70252323" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5392491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29083666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38825953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2554068" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -823,7 +1003,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -874,153 +1053,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/NewsDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="62" column="34" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/service/NewsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/dao/NewsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/type.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/news.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/leehom/news/dao/TypeDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="44" column="19" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/ea0c0390/2b4a38a1-cbe0-4d96-9cd6-05f6f837f158/news.detail">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/leehom/news/dao/DetailDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/dao/DetailDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/NewsServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/dao/TypeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/controller/LinkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/controller/NewsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/controller/TypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/controller/VoteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/success.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/error.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DetailDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <marker date="1545901880041" expanded="true" signature="270:316" ph="select * fro... detail" />
-            <marker date="1545901880041" expanded="true" signature="395:445" ph="select * fro... detail" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/head.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/type/index.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/type/list.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1032,15 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
           <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,14 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/utils/ResultVOUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1082,93 +1097,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/TypeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="57" column="25" lean-forward="false" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/service/TypeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/ea0c0390/2b4a38a1-cbe0-4d96-9cd6-05f6f837f158/news.type">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/enums/ResultEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/service/LinkService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminLinkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="25" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TypeDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding>
-            <marker date="1545898249515" expanded="true" signature="259:277" ph="SELECT * FRO... type" />
-            <marker date="1545898249515" expanded="true" signature="352:396" ph="SELECT * FRO... type" />
-            <marker date="1545898249515" expanded="true" signature="453:534" ph="UPDATE type " />
-            <marker date="1545898249515" expanded="true" signature="591:633" ph="DELETE FROM " />
-            <marker date="1545898249515" expanded="true" signature="690:769" ph="INSERT INTO type... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/LinkDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding>
-            <marker date="1546006653754" expanded="true" signature="235:317" ph="INSERT INTO link... " />
-            <marker date="1546006653754" expanded="true" signature="374:424" ph="DELETE FROM " />
-            <marker date="1546006653754" expanded="true" signature="499:543" ph="SELECT * FRO... link" />
-            <marker date="1546006653754" expanded="true" signature="613:631" ph="select * fro... link" />
-            <marker date="1546006653754" expanded="true" signature="684:834" ph="UPDATE link " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1180,26 +1112,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/TypeServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/ea0c0390/2b4a38a1-cbe0-4d96-9cd6-05f6f837f158/news.vote">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/dao/LinkDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,60 +1135,356 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/po/Detail.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/po/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="836">
+          <caret line="39" column="11" lean-forward="false" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/po/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="50" column="11" lean-forward="false" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/dao/SubnavDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/po/Subnav.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/leehom/news/dao/SubnavDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="21" column="17" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="27" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/SubnavServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/service/LinkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/NewsDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1144">
+          <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+          <folding>
+            <marker date="1546047404580" expanded="true" signature="257:301" ph="select * fro... news" />
+            <marker date="1546047404580" expanded="true" signature="402:643" ph="select n.new... news" />
+            <marker date="1546047404580" expanded="true" signature="736:935" ph="select n.new... news" />
+            <marker date="1546047404580" expanded="true" signature="1047:1399" ph="select n.new... nav" />
+            <marker date="1546047404580" expanded="true" signature="1508:1822" ph="select ns.ne... nav" />
+            <marker date="1546047404580" expanded="true" signature="1924:2192" ph="select ns.ne... nav" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/po/News.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SubnavDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <folding>
+            <marker date="1546047404576" expanded="true" signature="270:315" ph="select * fro... subnav" />
+            <marker date="1546047404576" expanded="true" signature="394:444" ph="select * fro... subnav" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/controller/NewsmakerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/controller/NewsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="40" column="14" lean-forward="false" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+          <folding>
+            <marker date="1546047492580" expanded="false" signature="1187:1202" ph="&lt;~&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/controller/NavController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/po/Link.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="576">
+          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/po/Manager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/controller/LinkController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="372">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/po/News.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/LinkDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="308">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <marker date="1546006653754" expanded="true" signature="235:317" ph="INSERT INTO link... " />
+            <marker date="1546006653754" expanded="true" signature="374:424" ph="DELETE FROM " />
+            <marker date="1546006653754" expanded="true" signature="499:543" ph="SELECT * FRO... link" />
+            <marker date="1546006653754" expanded="true" signature="613:631" ph="select * fro... link" />
+            <marker date="1546006653754" expanded="true" signature="684:834" ph="UPDATE link " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ManagerDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/po/Type.java">
+    <entry file="das://table:/ea0c0390/2b4a38a1-cbe0-4d96-9cd6-05f6f837f158/news.link">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="-92">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/po/Vote.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-cf.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminLinkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1914">
+          <caret line="87" column="27" lean-forward="false" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/po/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/NavDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        <state relative-caret-position="568">
+          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <marker date="1546052302865" expanded="true" signature="241:311" ph="INSERT INTO nav... " />
+            <marker date="1546052302865" expanded="true" signature="367:406" ph="DELETE FROM " />
+            <marker date="1546052302865" expanded="true" signature="475:489" ph="SELECT * FRO... type" />
+            <marker date="1546052302865" expanded="true" signature="475:492" ph="SELECT * FRO... nav" />
+            <marker date="1546052302865" expanded="true" signature="565:606" ph="SELECT * FRO... type" />
+            <marker date="1546052302865" expanded="true" signature="658:734" ph="UPDATE type " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/leehom/news/service/impl/NavServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/service/NavService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/po/Nav.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/enums/ResultEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/po/Newsmaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/dao/LinkDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/dao/NavDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/leehom/news/dao/NewsmakerDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/NewsmakerDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="64" lean-forward="false" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+          <folding>
+            <marker date="1546055348771" expanded="true" signature="253:494" ph="insert into newsmaker... " />
+            <marker date="1546055348771" expanded="true" signature="557:614" ph="DELETE FROM " />
+            <marker date="1546055348771" expanded="true" signature="699:758" ph="SELECT * FRO... newsmaker" />
+            <marker date="1546055348771" expanded="true" signature="833:856" ph="SELECT * FRO... newsmaker" />
+            <marker date="1546055348771" expanded="true" signature="914:1295" ph="UPDATE newsm... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/dao/NewsmakerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="40" column="23" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/service/NewsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/controller/AdminNavController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leehom/news/service/impl/NavServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/leehom/news/dao/NavDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
