@@ -15,7 +15,27 @@ public class NewsmakerServiceImpl implements NewsmakerService {
     private NewsmakerDao newsmakerDao;
 
     @Override
+    public int insertNewsmaker(Newsmaker newsmaker) {
+        return newsmakerDao.insertNewsmaker(newsmaker);
+    }
+
+    @Override
+    public int deleteNewsmakerById(Integer newsmakerId) {
+        return newsmakerDao.deleteNewsmakerById(newsmakerId);
+    }
+
+    @Override
+    public Newsmaker selectNewsmakerById(Integer newsmakerId) {
+        return newsmakerDao.selectNewsmakerById(newsmakerId);
+    }
+
+    @Override
     public List<Newsmaker> selectAll() {
         return newsmakerDao.selectAll();
+    }
+
+    @Override
+    public int updateNewsmaker(Newsmaker newsmaker) {
+        return newsmakerDao.updateNewsmaker(newsmaker);
     }
 }

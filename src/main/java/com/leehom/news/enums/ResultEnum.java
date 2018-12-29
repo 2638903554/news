@@ -19,6 +19,12 @@ public enum ResultEnum implements CodeEnum {
     SELECT_NAV_FAIL(11,"查找一级导航失败"),
     UPDATE_NAV_FAIL(12,"更新一级导航失败"),
 
+    INSERT_NEWSMAKER_FAIL(13,"添加新闻人物失败"),
+    DELETE_NEWSMAKER_FAIL(14,"删除新闻人物失败"),
+    SELECT_NEWSMAKER_FAIL(15,"查找新闻人物失败"),
+    UPDATE_NEWSMAKER_FAIL(16,"更新新闻人物失败"),
+
+
     ;
 
 
