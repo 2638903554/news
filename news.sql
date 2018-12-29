@@ -29,7 +29,7 @@ CREATE TABLE `link` (
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`link_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `link` (
 
 LOCK TABLES `link` WRITE;
 /*!40000 ALTER TABLE `link` DISABLE KEYS */;
-INSERT INTO `link` VALUES (18,'新浪','https://www.sina.com','2018-12-28 23:50:24','2018-12-28 23:50:24'),(19,'搜狐','https://www.souhu.com','2018-12-28 23:50:38','2018-12-28 23:50:38'),(20,'雅虎','https://www.yahoo.com.cn','2018-12-28 23:51:02','2018-12-28 23:51:02'),(21,'网易','https://www.163.com','2018-12-28 23:51:31','2018-12-28 23:51:31'),(22,'天涯','https://www.tianya.cn','2018-12-28 23:51:52','2018-12-28 23:51:52'),(23,'深圳大学','https://www.szpt.edu.cn','2018-12-28 23:52:36','2018-12-28 23:52:36');
+INSERT INTO `link` VALUES (18,'新浪','https://www.sina.com','2018-12-28 23:50:24','2018-12-28 23:50:24'),(19,'搜狐','https://www.souhu.com','2018-12-28 23:50:38','2018-12-28 23:50:38'),(20,'雅虎','https://www.yahoo.com.cn','2018-12-28 23:51:02','2018-12-28 23:51:02'),(21,'网易','https://www.163.com','2018-12-28 23:51:31','2018-12-28 23:51:31'),(22,'天涯','https://www.tianya.cn','2018-12-28 23:51:52','2018-12-28 23:51:52'),(23,'深圳大学','https://www.szpt.edu.cn','2018-12-28 23:52:36','2018-12-28 23:52:36'),(25,'深圳哈工大研究院','https://www.shgu.com','2018-12-29 10:17:48','2018-12-29 10:43:38');
 /*!40000 ALTER TABLE `link` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,9 +51,9 @@ DROP TABLE IF EXISTS `manager`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `manager` (
   `manager_id` int(11) NOT NULL AUTO_INCREMENT,
-  `manager_username` varchar(50) NOT NULL DEFAULT '',
-  `manager_password` varchar(50) NOT NULL DEFAULT '',
-  `manager_nickname` varchar(50) NOT NULL DEFAULT '',
+  `manager_user` varchar(50) NOT NULL DEFAULT '',
+  `manager_pass` varchar(50) NOT NULL DEFAULT '',
+  `manager_nick` varchar(50) NOT NULL DEFAULT '',
   `manager_status` int(11) NOT NULL DEFAULT '0' COMMENT '''0''普通管理员\\n''1''超级管理员',
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -79,12 +79,12 @@ DROP TABLE IF EXISTS `nav`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `nav` (
-  `type_id` int(11) NOT NULL AUTO_INCREMENT,
-  `type_name` varchar(50) NOT NULL DEFAULT '',
+  `nav_id` int(11) NOT NULL AUTO_INCREMENT,
+  `nav_name` varchar(50) NOT NULL DEFAULT '',
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`type_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`nav_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -93,7 +93,7 @@ CREATE TABLE `nav` (
 
 LOCK TABLES `nav` WRITE;
 /*!40000 ALTER TABLE `nav` DISABLE KEYS */;
-INSERT INTO `nav` VALUES (15,'体育','2018-05-09 04:12:10','2018-12-28 16:02:10'),(42,'娱乐','2018-05-09 06:12:10','2018-12-28 16:02:10'),(43,'财经','2018-05-09 08:12:10','2018-12-28 16:02:10');
+INSERT INTO `nav` VALUES (15,'体育','2018-05-09 04:12:10','2018-12-28 16:02:10'),(42,'娱乐','2018-05-09 06:12:10','2018-12-28 16:02:10'),(43,'财经','2018-05-09 08:12:10','2018-12-28 16:02:10'),(45,'传播','2018-12-29 03:12:13','2018-12-29 03:27:09');
 /*!40000 ALTER TABLE `nav` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -108,12 +108,12 @@ CREATE TABLE `news` (
   `news_id` int(11) NOT NULL AUTO_INCREMENT,
   `news_title` varchar(100) NOT NULL DEFAULT '',
   `news_content` longtext NOT NULL,
-  `detail_id` int(11) NOT NULL,
+  `subnav_id` int(11) NOT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`news_id`),
-  KEY `StyleId` (`detail_id`),
-  CONSTRAINT `news_ibfk_1` FOREIGN KEY (`detail_id`) REFERENCES `subnav` (`detail_id`)
+  KEY `StyleId` (`subnav_id`),
+  CONSTRAINT `news_ibfk_1` FOREIGN KEY (`subnav_id`) REFERENCES `subnav` (`subnav_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -128,6 +128,37 @@ INSERT INTO `news` VALUES (1,'小法：若无缘欧冠，只能怪我们浪费�
 UNLOCK TABLES;
 
 --
+-- Table structure for table `newsmaker`
+--
+
+DROP TABLE IF EXISTS `newsmaker`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `newsmaker` (
+  `newsmaker_id` int(11) NOT NULL AUTO_INCREMENT,
+  `newsmaker_name` varchar(50) NOT NULL DEFAULT '',
+  `newsmaker_address` varchar(50) NOT NULL DEFAULT '',
+  `newsmaker_age` int(11) NOT NULL,
+  `newsmaker_job` varchar(50) NOT NULL DEFAULT '',
+  `newsmaker_remark` varchar(200) NOT NULL DEFAULT '',
+  `vote_quantity` int(11) NOT NULL DEFAULT '0',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`newsmaker_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `newsmaker`
+--
+
+LOCK TABLES `newsmaker` WRITE;
+/*!40000 ALTER TABLE `newsmaker` DISABLE KEYS */;
+INSERT INTO `newsmaker` VALUES (16,'吴敏霞','上海',33,'跳水','相比于高敏、伏明霞和郭晶晶等前几任跳水“一姐”，吴敏霞似乎少了那么点霸气、才气与灵气，但她身上所独有的静气却也非其他几位跳水“一姐”所能及。事实上，也正是这一份静气，成就了吴敏霞今日的一切。',19,'2018-12-28 16:11:39','2018-12-28 16:15:56'),(17,'龙清泉','湖南',28,'男子举重','他天赋过人，悟性极高，抓举和挺举均衡，技术和力量融合完美',15,'2018-12-28 16:14:07','2018-12-28 16:14:07'),(18,'孙杨','浙江',27,'游泳','中国需要在本土之外证明自己的实力……中国有很多优秀的运动员，他们表现出了自己的潜力，比如孙杨，在游泳世界杯的时候就引起了我的关注，也势必会引起世界的关注。',9,'2018-12-28 16:14:56','2018-12-28 16:15:45');
+/*!40000 ALTER TABLE `newsmaker` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `subnav`
 --
 
@@ -135,14 +166,14 @@ DROP TABLE IF EXISTS `subnav`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `subnav` (
-  `detail_id` int(11) NOT NULL AUTO_INCREMENT,
-  `detail_name` varchar(50) NOT NULL DEFAULT '',
-  `type_id` int(11) NOT NULL DEFAULT '15',
+  `subnav_id` int(11) NOT NULL AUTO_INCREMENT,
+  `subnav_name` varchar(50) NOT NULL DEFAULT '',
+  `nav_id` int(11) NOT NULL DEFAULT '15',
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`detail_id`),
-  KEY `NewsTypeId` (`type_id`),
-  CONSTRAINT `subnav_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `nav` (`type_id`)
+  PRIMARY KEY (`subnav_id`),
+  KEY `NewsTypeId` (`nav_id`),
+  CONSTRAINT `subnav_ibfk_1` FOREIGN KEY (`nav_id`) REFERENCES `nav` (`nav_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -167,9 +198,10 @@ CREATE TABLE `user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户id',
   `user_name` varchar(50) NOT NULL DEFAULT '' COMMENT '用户登录账号',
   `user_nick` varchar(50) NOT NULL COMMENT '用户昵称',
-  `user_password` varchar(50) NOT NULL DEFAULT '' COMMENT '用户登录密码',
+  `user_pass` varchar(50) NOT NULL DEFAULT '' COMMENT '用户登录密码',
   `user_phone` varchar(20) NOT NULL COMMENT '用户手机',
   `user_email` varchar(30) NOT NULL COMMENT '用户邮箱',
+  `vote_status` int(11) NOT NULL DEFAULT '0' COMMENT '''0''表示未投票，‘1’表示已投票',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`user_id`)
@@ -184,37 +216,6 @@ LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `vote`
---
-
-DROP TABLE IF EXISTS `vote`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `vote` (
-  `vote_id` int(11) NOT NULL AUTO_INCREMENT,
-  `vote_name` varchar(50) NOT NULL DEFAULT '',
-  `vote_address` varchar(50) NOT NULL DEFAULT '',
-  `vote_age` int(11) NOT NULL,
-  `vote_job` varchar(50) NOT NULL DEFAULT '',
-  `vote_remark` varchar(200) NOT NULL DEFAULT '',
-  `vote_quantity` int(11) NOT NULL DEFAULT '0',
-  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`vote_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `vote`
---
-
-LOCK TABLES `vote` WRITE;
-/*!40000 ALTER TABLE `vote` DISABLE KEYS */;
-INSERT INTO `vote` VALUES (16,'吴敏霞','上海',33,'跳水','相比于高敏、伏明霞和郭晶晶等前几任跳水“一姐”，吴敏霞似乎少了那么点霸气、才气与灵气，但她身上所独有的静气却也非其他几位跳水“一姐”所能及。事实上，也正是这一份静气，成就了吴敏霞今日的一切。',19,'2018-12-28 16:11:39','2018-12-28 16:15:56'),(17,'龙清泉','湖南',28,'男子举重','他天赋过人，悟性极高，抓举和挺举均衡，技术和力量融合完美',15,'2018-12-28 16:14:07','2018-12-28 16:14:07'),(18,'孙杨','浙江',27,'游泳','中国需要在本土之外证明自己的实力……中国有很多优秀的运动员，他们表现出了自己的潜力，比如孙杨，在游泳世界杯的时候就引起了我的关注，也势必会引起世界的关注。',9,'2018-12-28 16:14:56','2018-12-28 16:15:45');
-/*!40000 ALTER TABLE `vote` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -225,4 +226,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-29  0:29:02
+-- Dump completed on 2018-12-29 12:02:12
