@@ -1,5 +1,7 @@
 package com.leehom.news.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.leehom.news.enums.ResultEnum;
 import com.leehom.news.exception.NewsException;
 import com.leehom.news.po.Nav;
@@ -55,9 +57,12 @@ public class AdminNavController {
     }
 
     @GetMapping(value = "/list")
-    public ResultVO list(){
+    public ResultVO list(@RequestParam(value = "pageNum",defaultValue = "1") int pageNum,
+                         @RequestParam(value = "pageSize",defaultValue = "4") int pageSize){
+        PageHelper.startPage(pageNum,pageSize);
         List<Nav> navList = navService.selectAll();
-        return ResultVOUtil.success(navList);
+        PageInfo pageInfo = new PageInfo(navList);
+        return ResultVOUtil.success(pageInfo);
     }
 
     @PostMapping(value = "update")

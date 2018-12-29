@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.leehom.news.dao.SubnavDao">
-    <select id="selectDetailListByTypeId" resultType="Subnav">
-        select * from subnav WHERE nav_id = #{typeId}
+
+    <insert id="insertSubnav" >
+        INSERT INTO
+            subnav (subnav_name, nav_id)
+        VALUES
+            (#{subnavName},#{navId})
+    </insert>
+
+    <delete id="deleteSubnavById">
+        DELETE FROM subnav
+        WHERE subnav_id = #{subnavId}
+    </delete>
+
+    <select id="selectSubnavListByNavId" resultType="Subnav">
+        select * from subnav WHERE nav_id = #{navId}
     </select>
 
-    <select id="selectByDetailId" resultType="Subnav">
+    <select id="selectAll" resultType="Subnav">
+        SELECT * FROM subnav
+    </select>
+
+    <select id="selectBySubnavId" resultType="Subnav">
         select * from subnav where subnav_id = #{detailId}
     </select>
+
+    <update id="updateSubnav">
+        UPDATE
+            subnav
+        SET
+            subnav_name = #{subnavName},
+            nav_id = #{navId}
+        WHERE
+            subnav_id = #{subnavId}
+    </update>
 </mapper>

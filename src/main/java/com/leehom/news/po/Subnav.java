@@ -9,12 +9,12 @@ public class Subnav {
     /**
      * 二级导航id
      */
-    private Integer subId;
+    private Integer subnavId;
 
     /**
      * 二级导航名字
      */
-    private String subName;
+    private String subnavName;
 
     /**
      * 一级导航id

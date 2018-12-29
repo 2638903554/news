@@ -15,7 +15,7 @@ public class SubnavServiceImplTest extends BaseTest {
 
     @Test
     public void selectByDetailIdTest() {
-        Subnav subnav = subnavService.selectByDetailId(38);
+        Subnav subnav = subnavService.selectBySubnavId(38);
         Assert.assertNotNull(subnav);
     }
 }

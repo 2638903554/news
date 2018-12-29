@@ -24,6 +24,9 @@ public enum ResultEnum implements CodeEnum {
     SELECT_NEWSMAKER_FAIL(15,"查找新闻人物失败"),
     UPDATE_NEWSMAKER_FAIL(16,"更新新闻人物失败"),
 
+    NAV_ID_ERROR(17,"二级导航中的navid错误"),
+
+
 
     ;
 
