@@ -159,6 +159,7 @@
           <version>2.3.20</version>
       </dependency>
 
+      <!--分页插件-->
       <dependency>
           <groupId>com.thetransactioncompany</groupId>
           <artifactId>java-property-utils</artifactId>
@@ -181,6 +182,26 @@
           <version>5.0.0</version>
       </dependency>
 
+      <!--Swagger-->
+      <dependency>
+          <groupId>com.mangofactory</groupId>
+          <artifactId>swagger-springmvc</artifactId>
+          <version>1.0.2</version>
+      </dependency>
+
+      <dependency>
+          <groupId>io.springfox</groupId>
+          <artifactId>springfox-swagger2</artifactId>
+          <version>2.6.1</version>
+      </dependency>
+
+      <dependency>
+          <groupId>io.springfox</groupId>
+          <artifactId>springfox-swagger-ui</artifactId>
+          <version>2.6.1</version>
+      </dependency>
+
+
   </dependencies>
 
   <build>
@@ -195,7 +216,7 @@
           <!--<filtering>true</filtering>-->
       <!--</resource>-->
     <!--</resources>-->
-      
+
     <pluginManagement>
       <plugins>
         <plugin>

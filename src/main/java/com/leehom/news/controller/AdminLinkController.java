@@ -5,9 +5,12 @@ import com.github.pagehelper.PageInfo;
 import com.leehom.news.enums.ResultEnum;
 import com.leehom.news.exception.NewsException;
 import com.leehom.news.po.Link;
+import com.leehom.news.po.User;
 import com.leehom.news.service.LinkService;
 import com.leehom.news.utils.ResultVOUtil;
 import com.leehom.news.vo.ResultVO;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +20,7 @@ import java.util.List;
 @RequestMapping(value = "/news/admin/link")
 @RestController
 @Slf4j
+@Api(value = "/link",tags = "link接口")
 public class AdminLinkController {
     @Autowired
     private LinkService linkService;

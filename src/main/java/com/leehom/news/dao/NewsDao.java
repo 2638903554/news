@@ -10,7 +10,7 @@ import java.util.List;
 public interface NewsDao {
 
 
-    News selectByNewsId(Integer newsId);
+    News selectNewsById(Integer newsId);
 
     List<NewsDto> selectAllByNewsId(Integer newsId);
 

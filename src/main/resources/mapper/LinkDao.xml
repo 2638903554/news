@@ -3,8 +3,8 @@
 <mapper namespace="com.leehom.news.dao.LinkDao">
 
     <insert id="insertLink">
-        INSERT INTO link (link_name, link_url) VALUES
-            (#{linkName},#{linkUrl})
+        INSERT INTO link (link_name, link_url,link_remark) VALUES
+            (#{linkName},#{linkUrl},#{linkRemark})
     </insert>
 
     <delete id="deleteLinkById">
@@ -25,7 +25,8 @@
             link
         SET
             link_name = #{linkName},
-            link_url = #{linkUrl}
+            link_url = #{linkUrl},
+            link_remark = #{linkRemark}
         WHERE
           link_id = #{linkId}
     </update>

@@ -58,7 +58,7 @@ public class AdminNavController {
 
     @GetMapping(value = "/list")
     public ResultVO list(@RequestParam(value = "pageNum",defaultValue = "1") int pageNum,
-                         @RequestParam(value = "pageSize",defaultValue = "4") int pageSize){
+                         @RequestParam(value = "pageSize",defaultValue = "10") int pageSize){
         PageHelper.startPage(pageNum,pageSize);
         List<Nav> navList = navService.selectAll();
         PageInfo pageInfo = new PageInfo(navList);

@@ -17,7 +17,7 @@ public class NewsServiceImpl implements NewsService {
 
     @Override
     public News selectByNewsId(Integer newsId) {
-        return newsDao.selectByNewsId(newsId);
+        return newsDao.selectNewsById(newsId);
     }
 
     @Override

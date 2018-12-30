@@ -22,6 +22,11 @@ public class Link {
     private String linkUrl;
 
     /**
+     * 新闻网站简介
+     */
+    private String linkRemark;
+
+    /**
      * 创建时间
      */
     private Date createTime;

@@ -11,12 +11,17 @@ public class Nav {
     /**
      * 一级导航id
      */
-    private Integer NavId;
+    private Integer navId;
 
     /**
      * 一级导航名字
      */
-    private String NavName;
+    private String navName;
+
+    /**
+     * 一级导航简介
+     */
+    private String navRemark;
 
     /**
      * 创建时间

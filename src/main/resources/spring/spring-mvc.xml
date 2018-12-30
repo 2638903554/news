@@ -13,6 +13,11 @@
 
     <mvc:default-servlet-handler />
 
+    <bean class="com.leehom.news.config.MySwaggerConfig"/>
+
+    <bean class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration"
+          id="swagger2Config"/>
+
     <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
         <!--<property name="prefix" value="/WEB-INF/jsp/" />-->
         <!--<property name="suffix" value=".jsp"/>-->

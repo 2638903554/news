@@ -7,6 +7,7 @@ public class NewsDto {
 
     private Integer newsId;
     private String newsTitle;
-    private String detailName;
+    private String subnavName;
+    private Date updateTime;
     private Date createTime;
 }

@@ -19,7 +19,7 @@ public class NewsDaoTest extends BaseTest {
 
     @Test
     public void selectByNewsIdTest(){
-        News news = newsDao.selectByNewsId(NEWSID);
+        News news = newsDao.selectNewsById(NEWSID);
         Assert.assertNotNull(news);
     }
 

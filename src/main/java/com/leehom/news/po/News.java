@@ -27,6 +27,16 @@ public class News {
     private Integer subnavId;
 
     /**
+     * 新闻文章阅读量
+     */
+    private Integer newsViews;
+
+    /**
+     * 新闻文章评论数
+     */
+    private Integer newsWords;
+
+    /**
      * 创建时间
      */
     private Date createTime;
