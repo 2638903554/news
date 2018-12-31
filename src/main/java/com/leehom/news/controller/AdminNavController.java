@@ -8,6 +8,7 @@ import com.leehom.news.po.Nav;
 import com.leehom.news.service.NavService;
 import com.leehom.news.utils.ResultVOUtil;
 import com.leehom.news.vo.ResultVO;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ import java.util.List;
 @RequestMapping(value = "/news/admin/nav")
 @RestController
 @Slf4j
+@Api(value = "/nav",tags = "一级导航相关接口")
 public class AdminNavController {
 
     @Autowired
@@ -58,7 +60,7 @@ public class AdminNavController {
 
     @GetMapping(value = "/list")
     public ResultVO list(@RequestParam(value = "pageNum",defaultValue = "1") int pageNum,
-                         @RequestParam(value = "pageSize",defaultValue = "10") int pageSize){
+                         @RequestParam(value = "pageSize",defaultValue = "3") int pageSize){
         PageHelper.startPage(pageNum,pageSize);
         List<Nav> navList = navService.selectAll();
         PageInfo pageInfo = new PageInfo(navList);
@@ -66,15 +68,13 @@ public class AdminNavController {
     }
 
     @PostMapping(value = "update")
-    public ResultVO update(@RequestParam("navId") Integer navId,
-                           @RequestParam("navName") String navName){
-        Nav nav = navService.selectNavById(navId);
-        if(nav == null){
+    public ResultVO update(@RequestBody Nav nav){
+        Nav result = navService.selectNavById(nav.getNavId());
+        if(result == null){
             throw new NewsException(ResultEnum.SELECT_NAV_FAIL);
         }
-        nav.setNavName(navName);
-        int result = navService.updateNav(nav);
-        if(result != 1){
+        result.setNavName(nav.getNavName());
+        if(navService.updateNav(result) != 1){
             throw new NewsException(ResultEnum.UPDATE_NAV_FAIL);
         }
         return ResultVOUtil.success(nav);

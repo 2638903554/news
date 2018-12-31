@@ -9,4 +9,12 @@ public interface UserService {
 
     List<User> selectAll();
 
+    int insertUsert(User user);
+
+    User userLogin(User user);
+
+    boolean userRegister(User user);
+
+//    User selectUserByUserName(String userName);
+
 }

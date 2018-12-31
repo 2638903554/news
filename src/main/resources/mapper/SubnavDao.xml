@@ -22,6 +22,21 @@
         SELECT * FROM subnav
     </select>
 
+    <select id="selectSubnavWithNavNameAll" resultType="com.leehom.news.dto.SubnavDto">
+        select
+            s.subnav_id,
+            s.subnav_name,
+            n.nav_name,
+            s.create_time,
+            s.update_time
+        FROM
+            subnav s
+        INNER JOIN nav n on n.nav_id = s.nav_id
+
+
+
+    </select>
+
     <select id="selectBySubnavId" resultType="Subnav">
         select * from subnav where subnav_id = #{detailId}
     </select>

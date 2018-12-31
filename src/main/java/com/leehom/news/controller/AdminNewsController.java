@@ -29,4 +29,16 @@ public class AdminNewsController {
         PageInfo pageInfo = new PageInfo(newsDtoList);
         return ResultVOUtil.success(pageInfo);
     }
+
+    @GetMapping(value = "/count")
+    public ResultVO count(){
+        Integer result = newsService.newsCount();
+        return ResultVOUtil.success(result);
+    }
+
+    @GetMapping(value = "/views")
+    public ResultVO views(){
+        Integer result = newsService.countViews();
+        return ResultVOUtil.success(result);
+    }
 }

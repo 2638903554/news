@@ -16,4 +16,6 @@ public interface NewsmakerService {
 
     int updateNewsmaker(Newsmaker newsmaker);
 
+    Integer newsmakerCount();
+
 }

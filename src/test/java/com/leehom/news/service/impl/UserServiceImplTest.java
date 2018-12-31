@@ -22,4 +22,14 @@ public class UserServiceImplTest extends BaseTest {
         Assert.assertNotNull(userList);
     }
 
+    @Test
+    public void insertUsertTest(){
+        User user = new User();
+        user.setUserName("zou");
+        user.setUserPhone("12333333333");
+        user.setUserPass("123445");
+        int result = userService.insertUsert(user);
+        Assert.assertTrue(1 == result);
+    }
+
 }

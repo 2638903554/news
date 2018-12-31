@@ -55,6 +55,14 @@
         <!--</property>-->
     <!--</bean>-->
 
+    <!--配置拦截器-->
+    <!--<mvc:interceptors>-->
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/**/**/**/**"/>-->
+            <!--<bean class="com.leehom.news.interceptor.LoginInterceptor"/>-->
+        <!--</mvc:interceptor>-->
+    <!--</mvc:interceptors>-->
+
     <context:component-scan base-package="com.leehom.news.controller"/>
 
 </beans>

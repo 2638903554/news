@@ -1,5 +1,8 @@
 package com.leehom.news.po;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+//import com.leehom.news.utils.DateToLongSerializer;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -26,11 +29,13 @@ public class Nav {
     /**
      * 创建时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date createTime;
 
     /**
      * 更新时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date updateTime;
 
 }

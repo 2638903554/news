@@ -1,33 +1,26 @@
-package com.leehom.news.po;
+package com.leehom.news.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-//import com.leehom.news.utils.DateToLongSerializer;
 import lombok.Data;
+
 import java.util.Date;
 
 @Data
-public class Link {
+public class SubnavDto {
+    /**
+     * 二级导航id
+     */
+    private Integer subnavId;
 
     /**
-     * 友情链接id
+     * 二级导航名字
      */
-    private Integer linkId;
+    private String subnavName;
 
     /**
-     * 友情链接名字
+     * 一级导航id
      */
-    private String linkName;
-
-    /**
-     * 友情链接url
-     */
-    private String linkUrl;
-
-    /**
-     * 新闻网站简介
-     */
-    private String linkRemark;
+    private String navName;
 
     /**
      * 创建时间

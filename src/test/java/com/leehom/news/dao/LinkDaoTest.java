@@ -19,4 +19,10 @@ public class LinkDaoTest extends BaseTest {
         Assert.assertTrue(linkList.size()>0);
     }
 
+    @Test
+    public void countTest(){
+        Integer result = linkDao.count();
+
+    }
+
 }

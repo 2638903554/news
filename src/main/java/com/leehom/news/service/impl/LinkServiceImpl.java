@@ -39,5 +39,8 @@ public class LinkServiceImpl implements LinkService {
         return linkDao.updateLink(link);
     }
 
-
+    @Override
+    public Integer countLink() {
+        return linkDao.count();
+    }
 }

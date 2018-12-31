@@ -3,21 +3,39 @@
 <mapper namespace="com.leehom.news.dao.LinkDao">
 
     <insert id="insertLink">
-        INSERT INTO link (link_name, link_url,link_remark) VALUES
+        INSERT INTO link
+            (link_name, link_url,link_remark)
+        VALUES
             (#{linkName},#{linkUrl},#{linkRemark})
     </insert>
 
     <delete id="deleteLinkById">
-        DELETE FROM link
+        DELETE FROM
+            link
         WHERE link_id = #{linkId}
     </delete>
 
     <select id="selectLinkById" resultType="Link">
-        SELECT * FROM link WHERE link_id = #{linkId}
+        SELECT *
+#             link_id,link_name,link_url,link_remark,
+#             create_time,update_time
+#             date_format(update_time,'%Y-%m-%d')
+        FROM
+            link
+        WHERE
+            link_id = #{linkId}
     </select>
 
     <select id="selectAll" resultType="Link">
-        select * from link
+        select *
+#             link_id,link_name,link_url,link_remark,
+#             create_time,update_time
+        from
+            link
+    </select>
+
+    <select id="count" resultType="Integer">
+        SELECT count(*) as value FROM link
     </select>
 
     <update id="updateLink">

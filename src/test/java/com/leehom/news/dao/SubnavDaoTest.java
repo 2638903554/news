@@ -1,5 +1,6 @@
 package com.leehom.news.dao;
 
+import com.leehom.news.dto.SubnavDto;
 import com.leehom.news.po.Subnav;
 import org.junit.Assert;
 import org.junit.Test;
@@ -38,6 +39,12 @@ public class SubnavDaoTest extends BaseTest {
     public void selectAllTest(){
         List<Subnav> subnavList = subnavDao.selectAll();
         Assert.assertNotNull(subnavList);
+    }
+
+    @Test
+    public void selectSubnavWithNavNameAllTest(){
+        List<SubnavDto> subnavDtoList = subnavDao.selectSubnavWithNavNameAll();
+        Assert.assertNotNull(subnavDtoList);
     }
 
     @Test

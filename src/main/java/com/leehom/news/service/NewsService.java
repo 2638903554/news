@@ -21,4 +21,8 @@ public interface NewsService {
 
     List<NewsDto> selectNewsByTypeId(Integer typeId);
 
+    Integer newsCount();
+
+    Integer countViews();
+
 }

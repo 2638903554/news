@@ -27,6 +27,9 @@ public interface NewsmakerDao {
      */
     Newsmaker selectNewsmakerById(Integer newsmakerId);
 
+
+    Integer newsmakerCount();
+
     /**
      * 查找所有新闻人物
      * @return

@@ -36,8 +36,18 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Override
+    public Integer countViews() {
+        return newsDao.countViews();
+    }
+
+    @Override
     public List<NewsDto> selectThreeNewsByTypeId(Integer typeId) {
         return newsDao.selectThreeNewsByTypeId(typeId);
+    }
+
+    @Override
+    public Integer newsCount() {
+        return newsDao.newsCount();
     }
 
     @Override

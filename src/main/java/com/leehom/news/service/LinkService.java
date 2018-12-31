@@ -16,4 +16,6 @@ public interface LinkService {
 
     int updateLink(Link link);
 
+    Integer countLink();
+
 }

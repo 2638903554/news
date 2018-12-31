@@ -20,7 +20,7 @@ import java.util.List;
 @RequestMapping(value = "/news/admin/link")
 @RestController
 @Slf4j
-@Api(value = "/link",tags = "link接口")
+@Api(value = "/link",tags = "友情链接相关接口")
 public class AdminLinkController {
     @Autowired
     private LinkService linkService;
@@ -86,29 +86,29 @@ public class AdminLinkController {
         return ResultVOUtil.success(pageInfo);
     }
 
+    @GetMapping(value = "/count")
+    public ResultVO count(){
+        Integer result = linkService.countLink();
+        return ResultVOUtil.success(result);
+    }
+
     /**
      * 更新友情链接
-     * @param linkId
-     * @param linkName
-     * @param linkUrl
+     * @param link
      * @return
      */
     @PostMapping(value = "/update")
-    public ResultVO update(@RequestParam("linkId") Integer linkId,
-                           @RequestParam("linkName") String linkName,
-                           @RequestParam("linkUrl") String linkUrl){
-        Link link = linkService.selectLinkById(linkId);
-        if(link == null){
+    public ResultVO update(@RequestBody Link link){
+        Link result = linkService.selectLinkById(link.getLinkId());
+        if(result == null){
             throw new NewsException(ResultEnum.SELECT_LINK_FAIL);
         }
-        link.setLinkUrl(linkUrl);
-        link.setLinkName(linkName);
-        int result = linkService.updateLink(link);
-        if(result != 1){
+        result.setLinkUrl(link.getLinkUrl());
+        result.setLinkName(link.getLinkName());
+        if(linkService.updateLink(link) != 1){
             throw new NewsException(ResultEnum.UPDATE_TYPE_ERROR);
         }
-        link = linkService.selectLinkById(linkId);
-        return ResultVOUtil.success(link);
+        return ResultVOUtil.success(linkService.selectLinkById(link.getLinkId()));
     }
 
 }

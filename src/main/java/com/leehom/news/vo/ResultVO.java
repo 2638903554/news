@@ -2,8 +2,10 @@ package com.leehom.news.vo;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class ResultVO<T> {
+public class ResultVO<T> implements Serializable {
 
     /**
      * 错误码

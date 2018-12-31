@@ -32,6 +32,8 @@ public interface LinkDao {
      */
     List<Link> selectAll();
 
+    Integer count();
+
     /**
      * 更新友情链接
      * @param link

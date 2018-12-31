@@ -1,5 +1,6 @@
 package com.leehom.news.dao;
 
+import com.leehom.news.dto.SubnavDto;
 import com.leehom.news.po.Subnav;
 
 import java.util.List;
@@ -35,11 +36,19 @@ public interface SubnavDao {
      */
     Subnav selectBySubnavId(Integer subnavId);
 
+
     /**
      * 查找所有二级导航
      * @return
      */
     List<Subnav> selectAll();
+
+    /**
+     * 查找所有二级导航附带所属一级导航名字
+     * @return
+     */
+    List<SubnavDto> selectSubnavWithNavNameAll();
+
 
     /**
      * 更新二级导航

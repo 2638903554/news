@@ -26,7 +26,10 @@
             n.create_time
         from
             news n
-        inner join subnav s on n.subnav_id = s.subnav_id
+        inner join
+            subnav s on n.subnav_id = s.subnav_id
+        ORDER BY
+            news_id ASC
     </select>
 
     <select id="selectNewsByTypeIdAndKeyWord" resultType="com.leehom.news.dto.NewsDto">
@@ -58,6 +61,14 @@
         WHERE
             nv.nav_id = #{typeId}
         LIMIT 0,3
+    </select>
+
+    <select id="newsCount" resultType="Integer">
+        SELECT count(*) as value FROM news
+    </select>
+
+    <select id="countViews" resultType="Integer">
+        SELECT sum(news_views) FROM news
     </select>
 
     <select id="selectNewsByTypeId" resultType="com.leehom.news.dto.NewsDto">

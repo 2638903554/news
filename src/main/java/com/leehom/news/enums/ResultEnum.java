@@ -24,6 +24,13 @@ public enum ResultEnum implements CodeEnum {
     SELECT_NEWSMAKER_FAIL(15,"查找新闻人物失败"),
     UPDATE_NEWSMAKER_FAIL(16,"更新新闻人物失败"),
 
+    USER_NAME_EXIST(17,"账号已存在"),
+    USER_PHONE_EXIST(18,"手机号码已经存在"),
+    USER_REGISTER_FAIL(19,"用户注册失败"),
+    USER_NAME_EMPTY(20,"该用户不存在"),
+    USER_PASS_ERROR(21,"用户密码错误"),
+    LOGIN_ERROR(22,"用户登录失败"),
+
     NAV_ID_ERROR(17,"二级导航中的navid错误"),
 
 

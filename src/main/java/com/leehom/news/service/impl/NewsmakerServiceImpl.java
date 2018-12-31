@@ -38,4 +38,9 @@ public class NewsmakerServiceImpl implements NewsmakerService {
     public int updateNewsmaker(Newsmaker newsmaker) {
         return newsmakerDao.updateNewsmaker(newsmaker);
     }
+
+    @Override
+    public Integer newsmakerCount() {
+        return newsmakerDao.newsmakerCount();
+    }
 }

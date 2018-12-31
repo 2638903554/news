@@ -1,5 +1,6 @@
 package com.leehom.news.service;
 
+import com.leehom.news.dto.SubnavDto;
 import com.leehom.news.po.Subnav;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -41,6 +42,12 @@ public interface SubnavService {
      * @return
      */
     List<Subnav> selectAll();
+
+    /**
+     * 查找所有二级导航附带所属一级导航名字
+     * @return
+     */
+    List<SubnavDto> selectSubnavWithNavNameAll();
 
     /**
      * 更新二级导航

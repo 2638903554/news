@@ -65,6 +65,12 @@ public class AdminNewsmakerController {
         return ResultVOUtil.success(newsmaker);
     }
 
+    @GetMapping(value = "count")
+    public ResultVO count(){
+        Integer result = newsmakerService.newsmakerCount();
+        return ResultVOUtil.success(result);
+    }
+
     /**
      * 查找所有新闻人物数据
      * @return

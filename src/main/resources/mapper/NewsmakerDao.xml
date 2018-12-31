@@ -12,6 +12,10 @@
         DELETE FROM newsmaker WHERE newsmaker_id = #{newsmakerId}
     </delete>
 
+    <select id="newsmakerCount" resultType="Integer">
+        SELECT count(*) as value FROM link
+    </select>
+
     <select id="selectNewsmakerById" resultType="Newsmaker">
         SELECT * FROM newsmaker WHERE newsmaker_id = #{newsmakerId}
     </select>

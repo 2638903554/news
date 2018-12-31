@@ -15,7 +15,13 @@
     </delete>
 
     <select id="selectAll" resultType="Nav">
-        SELECT * FROM nav
+        SELECT
+            *
+#             nav_id,nav_name,nav_remark,
+#             create_time,update_time
+#             date_format(create_time,'%Y-%m-%d'),
+#             date_format(update_time,'%Y-%m-%d')
+        FROM nav
     </select>
 
     <select id="selectNavById" resultType="Nav">

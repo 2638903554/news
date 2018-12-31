@@ -1,6 +1,7 @@
 package com.leehom.news.service.impl;
 
 import com.leehom.news.dao.SubnavDao;
+import com.leehom.news.dto.SubnavDto;
 import com.leehom.news.enums.ResultEnum;
 import com.leehom.news.exception.NewsException;
 import com.leehom.news.po.Subnav;
@@ -45,6 +46,11 @@ public class SubnavServiceImpl implements SubnavService {
     @Override
     public List<Subnav> selectAll() {
         return subnavDao.selectAll();
+    }
+
+    @Override
+    public List<SubnavDto> selectSubnavWithNavNameAll() {
+        return subnavDao.selectSubnavWithNavNameAll();
     }
 
     @Override

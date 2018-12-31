@@ -44,4 +44,16 @@ public class NewsDaoTest extends BaseTest {
         Assert.assertTrue(newsDtoList.size()>0);
     }
 
+    @Test
+    public void newsCountTest(){
+        Integer result = newsDao.newsCount();
+
+    }
+
+    @Test
+    public void countViewsTest(){
+        Integer result = newsDao.countViews();
+
+    }
+
 }

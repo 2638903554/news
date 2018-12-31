@@ -28,6 +28,11 @@ public interface NewsDao {
                                                @Param("newsTitle") String newsTitle);
 
 
+
+    Integer newsCount();
+
+    Integer countViews();
+
     /**
      * 查询各类型新闻前3条数据，用于首页显示
      * @param typeId
