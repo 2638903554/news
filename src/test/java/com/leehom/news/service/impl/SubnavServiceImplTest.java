@@ -23,6 +23,12 @@ public class SubnavServiceImplTest extends BaseTest {
     }
 
     @Test
+    public void deleteSubnavByIdTest(){
+        int result = subnavService.deleteSubnavById(38);
+        Assert.assertTrue( 1 == result);
+    }
+
+    @Test
     public void selectSubnavWithNavNameAllTest(){
         List<SubnavDto> subnavDtoList = subnavService.selectSubnavWithNavNameAll();
         Assert.assertNotNull(subnavDtoList);

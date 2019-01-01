@@ -1,5 +1,6 @@
 package com.leehom.news.dao;
 
+import com.leehom.news.dto.ArticleDto;
 import com.leehom.news.dto.NewsDto;
 import com.leehom.news.po.News;
 import org.apache.ibatis.annotations.Param;
@@ -9,14 +10,17 @@ import java.util.List;
 
 public interface NewsDao {
 
-
     News selectNewsById(Integer newsId);
 
     List<NewsDto> selectAllByNewsId(Integer newsId);
 
-
+    List<News> selectAllBySubnavId(Integer subnavId);
 
     List<NewsDto> selectAll();
+
+    ArticleDto selectArticleDtoByNewsId(Integer newsId);
+
+    List<ArticleDto> selectArticleDtoByViews();
 
     /**
      * 根据typeId和keyWord进行模糊查询
@@ -26,7 +30,6 @@ public interface NewsDao {
      */
     List<NewsDto> selectNewsByTypeIdAndKeyWord(@Param("typeId") Integer typeId,
                                                @Param("newsTitle") String newsTitle);
-
 
 
     Integer newsCount();

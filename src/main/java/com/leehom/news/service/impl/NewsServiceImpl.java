@@ -1,6 +1,7 @@
 package com.leehom.news.service.impl;
 
 import com.leehom.news.dao.NewsDao;
+import com.leehom.news.dto.ArticleDto;
 import com.leehom.news.dto.NewsDto;
 import com.leehom.news.po.News;
 import com.leehom.news.service.NewsService;
@@ -26,6 +27,11 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Override
+    public List<ArticleDto> selectArticleDtoByViews() {
+        return newsDao.selectArticleDtoByViews();
+    }
+
+    @Override
     public List<NewsDto> selectNewsByTypeIdAndKeyWord(Integer typeId, String newsTitle) {
         return newsDao.selectNewsByTypeIdAndKeyWord(typeId,newsTitle);
     }
@@ -38,6 +44,11 @@ public class NewsServiceImpl implements NewsService {
     @Override
     public Integer countViews() {
         return newsDao.countViews();
+    }
+
+    @Override
+    public ArticleDto selectArticleDtoByNewsId(Integer newsId) {
+        return newsDao.selectArticleDtoByNewsId(newsId);
     }
 
     @Override

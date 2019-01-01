@@ -24,7 +24,7 @@ public class NavServiceImplTest extends BaseTest {
 
     @Test
     public void deleteNavByIdTest(){
-        int result = navService.deleteNavById(45);
+        int result = navService.deleteNavById(15);
         Assert.assertTrue(1==result);
     }
 

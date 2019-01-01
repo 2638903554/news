@@ -6,6 +6,7 @@ import com.leehom.news.po.Newsmaker;
 import com.leehom.news.service.NewsmakerService;
 import com.leehom.news.utils.ResultVOUtil;
 import com.leehom.news.vo.ResultVO;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/news/admin/newsmaker")
+@Api(value = "/news/admin/newsmaker",tags = "后台新闻人物接口")
 public class AdminNewsmakerController {
 
     @Autowired

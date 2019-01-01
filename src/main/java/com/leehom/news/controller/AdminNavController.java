@@ -18,7 +18,7 @@ import java.util.List;
 @RequestMapping(value = "/news/admin/nav")
 @RestController
 @Slf4j
-@Api(value = "/nav",tags = "一级导航相关接口")
+@Api(value = "/nav",tags = "后台一级导航相关接口")
 public class AdminNavController {
 
     @Autowired
@@ -36,18 +36,16 @@ public class AdminNavController {
         return ResultVOUtil.success(nav);
     }
 
-//    @GetMapping(value = "delete")
-//    public ResultVO delete(@RequestParam("navId") Integer navId){
-//        Nav nav = navService.selectNavById(navId);
-//        if(nav == null){
-//            throw new NewsException(ResultEnum.SELECT_NAV_FAIL);
-//        }
-//        int result = navService.deleteNavById(navId);
-//        if(result != 1){
-//            throw new NewsException(ResultEnum.DELETE_NAV_FAIL)
-//        }
-//        return ResultVOUtil.success(nav);
-//    }
+    @GetMapping(value = "delete")
+    public ResultVO delete(@RequestParam("navId") Integer navId){
+        Nav nav = navService.selectNavById(navId);
+        if(nav == null){
+            log.error("【后台删除单条nav记录】,nvaId = {}",navId);
+            throw new NewsException(ResultEnum.SELECT_NAV_FAIL);
+        }
+        navService.deleteNavById(navId);
+        return ResultVOUtil.success(nav);
+    }
 
     @GetMapping(value = "/select")
     public ResultVO select(@RequestParam("navId") Integer navId){
@@ -59,12 +57,11 @@ public class AdminNavController {
     }
 
     @GetMapping(value = "/list")
-    public ResultVO list(@RequestParam(value = "pageNum",defaultValue = "1") int pageNum,
-                         @RequestParam(value = "pageSize",defaultValue = "3") int pageSize){
-        PageHelper.startPage(pageNum,pageSize);
+    public ResultVO list(){
+//        PageHelper.startPage(pageNum,pageSize);
         List<Nav> navList = navService.selectAll();
-        PageInfo pageInfo = new PageInfo(navList);
-        return ResultVOUtil.success(pageInfo);
+//        PageInfo pageInfo = new PageInfo(navList);
+        return ResultVOUtil.success(navList);
     }
 
     @PostMapping(value = "update")

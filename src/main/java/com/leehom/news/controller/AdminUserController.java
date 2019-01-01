@@ -6,6 +6,7 @@ import com.leehom.news.po.User;
 import com.leehom.news.service.UserService;
 import com.leehom.news.utils.ResultVOUtil;
 import com.leehom.news.vo.ResultVO;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/news/admin/user")
+@Api(value = "/news/admin/user",tags = "后台用户管理接口")
 public class AdminUserController {
 
     @Autowired

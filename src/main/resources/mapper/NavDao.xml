@@ -14,6 +14,28 @@
         DELETE FROM nav WHERE nav_id = #{navId}
     </delete>
 
+    <select id="selectAllArticleByNavId" parameterType="Integer" resultType="com.leehom.news.dto.ArticleDto">
+        select
+            n.nav_id,
+            n.nav_name,
+            sv.subnav_name,
+            ns.news_id,
+            ns.news_title,
+            ns.news_remark,
+            ns.news_content,
+            ns.news_views,
+            ns.news_words,
+            ns.create_time
+        from
+            nav n
+        INNER JOIN
+            subnav sv on sv.nav_id = n.nav_id
+        INNER JOIN
+            news ns on ns.subnav_id = sv.subnav_id
+        WHERE
+            n.nav_id = #{navId}
+    </select>
+
     <select id="selectAll" resultType="Nav">
         SELECT
             *

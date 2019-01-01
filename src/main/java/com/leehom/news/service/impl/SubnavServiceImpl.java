@@ -1,9 +1,12 @@
 package com.leehom.news.service.impl;
 
+import com.leehom.news.dao.NewsDao;
 import com.leehom.news.dao.SubnavDao;
+import com.leehom.news.dto.NewsDto;
 import com.leehom.news.dto.SubnavDto;
 import com.leehom.news.enums.ResultEnum;
 import com.leehom.news.exception.NewsException;
+import com.leehom.news.po.News;
 import com.leehom.news.po.Subnav;
 import com.leehom.news.service.SubnavService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +19,9 @@ public class SubnavServiceImpl implements SubnavService {
 
     @Autowired
     private SubnavDao subnavDao;
+
+    @Autowired
+    private NewsDao newsDao;
 
     @Override
     public List<Subnav> selectSubnavListByNavId(Integer navId) {
@@ -35,6 +41,10 @@ public class SubnavServiceImpl implements SubnavService {
 
     @Override
     public int deleteSubnavById(Integer subnavId) {
+        List<News> newsList = newsDao.selectAllBySubnavId(subnavId);
+        if(newsList.size()!=0){
+            throw new NewsException(ResultEnum.NEWS_NOT_EMPTY);
+        }
         return subnavDao.deleteSubnavById(subnavId);
     }
 

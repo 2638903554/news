@@ -1,5 +1,6 @@
 package com.leehom.news.dao;
 
+import com.leehom.news.dto.ArticleDto;
 import com.leehom.news.po.Nav;
 import org.junit.Assert;
 import org.junit.Test;
@@ -31,6 +32,12 @@ public class NavDaoTest extends BaseTest {
     public void selectNavByIdTest(){
         Nav type = navDao.selectNavById(15);
         Assert.assertNotNull(type);
+    }
+
+    @Test
+    public void selectAllArticleTest(){
+        List<ArticleDto> articleDtoList = navDao.selectAllArticleByNavId(15);
+        Assert.assertNotNull(articleDtoList);
     }
 
     @Test

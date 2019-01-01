@@ -1,5 +1,6 @@
 package com.leehom.news.dao;
 
+import com.leehom.news.dto.ArticleDto;
 import com.leehom.news.dto.NewsDto;
 import com.leehom.news.po.News;
 import lombok.extern.slf4j.Slf4j;
@@ -42,6 +43,18 @@ public class NewsDaoTest extends BaseTest {
         List<NewsDto> newsDtoList = newsDao.selectThreeNewsByTypeId(15);
         Assert.assertNotNull(newsDtoList);
         Assert.assertTrue(newsDtoList.size()>0);
+    }
+
+    @Test
+    public void selectAllBySubnavIdTest(){
+        List<News> newsList = newsDao.selectAllBySubnavId(38);
+        Assert.assertNotNull(newsList);
+    }
+
+    @Test
+    public void selectArticleDtoByViewsTest(){
+        List<ArticleDto> articleDtoList = newsDao.selectArticleDtoByViews();
+        Assert.assertNotNull(articleDtoList.size() > 0);
     }
 
     @Test

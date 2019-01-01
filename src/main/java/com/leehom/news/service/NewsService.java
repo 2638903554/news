@@ -1,6 +1,7 @@
 package com.leehom.news.service;
 
 import com.leehom.news.dao.NewsDao;
+import com.leehom.news.dto.ArticleDto;
 import com.leehom.news.dto.NewsDto;
 import com.leehom.news.po.News;
 
@@ -20,6 +21,10 @@ public interface NewsService {
     List<NewsDto> selectThreeNewsByTypeId(Integer typeId);
 
     List<NewsDto> selectNewsByTypeId(Integer typeId);
+
+    ArticleDto selectArticleDtoByNewsId(Integer newsId);
+
+    List<ArticleDto> selectArticleDtoByViews();
 
     Integer newsCount();
 

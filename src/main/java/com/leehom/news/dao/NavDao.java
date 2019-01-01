@@ -1,5 +1,6 @@
 package com.leehom.news.dao;
 
+import com.leehom.news.dto.ArticleDto;
 import com.leehom.news.po.Nav;
 
 import java.util.List;
@@ -32,6 +33,10 @@ public interface NavDao {
      * @return
      */
     Nav selectNavById(Integer navId);
+
+
+    List<ArticleDto> selectAllArticleByNavId(Integer navId);
+
 
     /**
      * 更新一级类别

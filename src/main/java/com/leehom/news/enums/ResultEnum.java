@@ -33,6 +33,10 @@ public enum ResultEnum implements CodeEnum {
 
     NAV_ID_ERROR(17,"二级导航中的navid错误"),
 
+    NEWS_NOT_EMPTY(18,"该二级导航下的文章不为空"),
+
+
+
 
 
     ;

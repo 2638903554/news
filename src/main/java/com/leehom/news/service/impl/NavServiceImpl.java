@@ -2,16 +2,20 @@ package com.leehom.news.service.impl;
 
 import com.leehom.news.dao.SubnavDao;
 import com.leehom.news.dao.NavDao;
+import com.leehom.news.dto.ArticleDto;
 import com.leehom.news.enums.ResultEnum;
 import com.leehom.news.exception.NewsException;
 import com.leehom.news.po.Nav;
+import com.leehom.news.po.Subnav;
 import com.leehom.news.service.NavService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Slf4j
 public class NavServiceImpl implements NavService {
 
     @Autowired
@@ -26,17 +30,18 @@ public class NavServiceImpl implements NavService {
     }
 
     @Override
-    public int deleteNavById(Integer typeId) {
-//        List<Subnav> subnavList = subnavDao.selectDetailListByNavId(typeId);
-//        if(0 != subnavList.size()){
-//            throw new NewsException(ResultEnum.DETAIL_NOT_NULL);
-//        }
-//        int result = navDao.deleteTypeById(typeId);
-//        if(result != 1){
-//            throw new NewsException(ResultEnum.DELETE_TYPE_ERROR);
-//        }
-//        return result;
-        return 1;
+    public int deleteNavById(Integer navId) {
+        List<Subnav> subnavList = subnavDao.selectSubnavListByNavId(navId);
+        if(subnavList.size() != 0){
+            log.error("[一级导航操作] 该一级导航下有二级导航，{}",subnavList);
+            throw new NewsException(ResultEnum.DETAIL_NOT_NULL);
+        }
+        return navDao.deleteNavById(navId);
+    }
+
+    @Override
+    public List<ArticleDto> selectAllArticleByNavId(Integer navId) {
+        return navDao.selectAllArticleByNavId(navId);
     }
 
     @Override

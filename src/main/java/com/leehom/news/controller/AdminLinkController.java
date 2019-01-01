@@ -20,7 +20,7 @@ import java.util.List;
 @RequestMapping(value = "/news/admin/link")
 @RestController
 @Slf4j
-@Api(value = "/link",tags = "友情链接相关接口")
+@Api(value = "/link",tags = "后台友情链接相关接口")
 public class AdminLinkController {
     @Autowired
     private LinkService linkService;

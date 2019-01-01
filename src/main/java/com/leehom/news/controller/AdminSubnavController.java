@@ -7,6 +7,7 @@ import com.leehom.news.po.Subnav;
 import com.leehom.news.service.SubnavService;
 import com.leehom.news.utils.ResultVOUtil;
 import com.leehom.news.vo.ResultVO;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/news/admin/subnav")
+@Api(value = "/news/admin/subnav",tags = "后台二级导航接口")
 public class AdminSubnavController {
 
     @Autowired

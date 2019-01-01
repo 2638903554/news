@@ -48,6 +48,45 @@
 
     </select>
 
+    <select id="selectArticleDtoByNewsId" resultType="com.leehom.news.dto.ArticleDto">
+        select
+            ns.news_words,
+            ns.news_views,
+            ns.news_content,
+            ns.news_title,
+            nv.nav_name,
+            sv.subnav_name
+        from
+          news ns
+        INNER JOIN
+            subnav sv on sv.subnav_id = ns.subnav_id
+        INNER JOIN
+              nav nv on nv.nav_id = sv.nav_id
+        WHERE
+            ns.news_id = #{newsId}
+    </select>
+
+    <select id="selectArticleDtoByViews" resultType="com.leehom.news.dto.ArticleDto">
+        select
+            ns.news_id,
+            nv.nav_name,
+            sv.subnav_name,
+            ns.news_title,
+            ns.news_remark,
+            ns.news_views,
+            ns.news_words,
+            ns.create_time
+        from
+            news ns
+        INNER JOIN
+            subnav sv on ns.subnav_id = sv.subnav_id
+        INNER JOIN
+            nav nv on nv.nav_id = sv.nav_id
+        ORDER BY
+            news_views
+        DESC
+    </select>
+
 
     <select id="selectThreeNewsByTypeId" resultType="com.leehom.news.dto.NewsDto">
         select
@@ -66,6 +105,11 @@
     <select id="newsCount" resultType="Integer">
         SELECT count(*) as value FROM news
     </select>
+
+    <select id="selectAllBySubnavId" resultType="News">
+        select * from news where subnav_id = #{subnavId}
+    </select>
+
 
     <select id="countViews" resultType="Integer">
         SELECT sum(news_views) FROM news
