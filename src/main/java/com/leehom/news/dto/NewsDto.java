@@ -9,8 +9,8 @@ public class NewsDto {
     private Integer newsId;
     private String newsTitle;
     private String subnavName;
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+    @JsonFormat(pattern = "dd HH:mm", timezone = "GMT+8")
     private Date updateTime;
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    private Date createTime;
+//    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+//    private Date createTime;
 }

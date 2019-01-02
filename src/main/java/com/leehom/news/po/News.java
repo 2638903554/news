@@ -1,8 +1,6 @@
 package com.leehom.news.po;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-//import com.leehom.news.utils.DateToLongSerializer;
 import lombok.Data;
 import java.util.Date;
 
@@ -18,6 +16,11 @@ public class News {
      * 新闻标题
      */
     private String newsTitle;
+
+    /**
+     * 新闻简介
+     */
+    private String newsRemark;
 
     /**
      * 新闻内容

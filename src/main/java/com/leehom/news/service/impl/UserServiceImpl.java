@@ -24,6 +24,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User selectUserById(Integer userId) {
+        return userDao.selectUserByUserId(userId);
+    }
+
+    @Override
     public User userLogin(User user) {
         boolean flag = true;
         User user1 = userDao.selectUserByUserName(user.getUserName());

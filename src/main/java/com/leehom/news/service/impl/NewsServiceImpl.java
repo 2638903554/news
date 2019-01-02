@@ -17,6 +17,11 @@ public class NewsServiceImpl implements NewsService {
     private NewsDao newsDao;
 
     @Override
+    public int updateNews(News news) {
+        return newsDao.updateNews(news);
+    }
+
+    @Override
     public News selectByNewsId(Integer newsId) {
         return newsDao.selectNewsById(newsId);
     }
@@ -32,13 +37,13 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Override
-    public List<NewsDto> selectNewsByTypeIdAndKeyWord(Integer typeId, String newsTitle) {
-        return newsDao.selectNewsByTypeIdAndKeyWord(typeId,newsTitle);
+    public List<ArticleDto> selectNewsOfTheDay() {
+        return newsDao.selectNewsOfTheDay();
     }
 
     @Override
-    public List<NewsDto> selectAllByNewsId(Integer newsId) {
-        return newsDao.selectAllByNewsId(newsId);
+    public List<NewsDto> selectNewsByTypeIdAndKeyWord(Integer typeId, String newsTitle) {
+        return newsDao.selectNewsByTypeIdAndKeyWord(typeId,newsTitle);
     }
 
     @Override
@@ -52,17 +57,8 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Override
-    public List<NewsDto> selectThreeNewsByTypeId(Integer typeId) {
-        return newsDao.selectThreeNewsByTypeId(typeId);
-    }
-
-    @Override
     public Integer newsCount() {
         return newsDao.newsCount();
     }
 
-    @Override
-    public List<NewsDto> selectNewsByTypeId(Integer typeId) {
-        return newsDao.selectNewsByTypeId(typeId);
-    }
 }

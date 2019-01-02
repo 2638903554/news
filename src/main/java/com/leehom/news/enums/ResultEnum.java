@@ -35,6 +35,9 @@ public enum ResultEnum implements CodeEnum {
 
     NEWS_NOT_EMPTY(18,"该二级导航下的文章不为空"),
 
+    USER_ID_ERROR(19,"用户id错误"),
+
+
 
 
 

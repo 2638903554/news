@@ -12,7 +12,6 @@ public interface NewsDao {
 
     News selectNewsById(Integer newsId);
 
-    List<NewsDto> selectAllByNewsId(Integer newsId);
 
     List<News> selectAllBySubnavId(Integer subnavId);
 
@@ -21,6 +20,8 @@ public interface NewsDao {
     ArticleDto selectArticleDtoByNewsId(Integer newsId);
 
     List<ArticleDto> selectArticleDtoByViews();
+
+    List<ArticleDto> selectNewsOfTheDay();
 
     /**
      * 根据typeId和keyWord进行模糊查询
@@ -32,17 +33,20 @@ public interface NewsDao {
                                                @Param("newsTitle") String newsTitle);
 
 
-    Integer newsCount();
-
-    Integer countViews();
-
     /**
-     * 查询各类型新闻前3条数据，用于首页显示
-     * @param typeId
+     * 查看新闻条数
      * @return
      */
-    List<NewsDto> selectThreeNewsByTypeId(@Param("typeId") Integer typeId);
+    Integer newsCount();
 
-    List<NewsDto> selectNewsByTypeId(@Param("typeId") Integer typeId);
+    /**
+     * 计算总访问量
+     * @return
+     */
+    Integer countViews();
+
+    int updateNews(News news);
+
+
 
 }

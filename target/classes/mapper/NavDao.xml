@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leehom.news.dao.NavDao">
+
+    <insert id="insertNav">
+        INSERT INTO nav
+        (nav_name,nav_remark)
+        VALUES
+        (#{navName},#{navRemark})
+    </insert>
+
+    <delete id="deleteNavById">
+        DELETE FROM nav WHERE nav_id = #{navId}
+    </delete>
+
+    <select id="selectAllArticleByNavId" parameterType="Integer" resultType="com.leehom.news.dto.ArticleDto">
+        select
+            n.nav_id,
+            n.nav_name,
+            sv.subnav_name,
+            ns.news_id,
+            ns.news_title,
+            ns.news_remark,
+            ns.news_content,
+            ns.news_views,
+            ns.news_words,
+            ns.create_time
+        from
+            nav n
+        INNER JOIN
+            subnav sv on sv.nav_id = n.nav_id
+        INNER JOIN
+            news ns on ns.subnav_id = sv.subnav_id
+        WHERE
+            n.nav_id = #{navId}
+    </select>
+
+    <select id="selectAll" resultType="Nav">
+        SELECT
+            *
+#             nav_id,nav_name,nav_remark,
+#             create_time,update_time
+#             date_format(create_time,'%Y-%m-%d'),
+#             date_format(update_time,'%Y-%m-%d')
+        FROM nav
+    </select>
+
+    <select id="selectNavById" resultType="Nav">
+        SELECT * FROM nav WHERE nav_id = #{navId}
+    </select>
+
+    <update id="updateNav">
+        UPDATE nav
+        set
+            nav_name = #{navName},
+            nav_remark = #{navRemark}
+        WHERE nav_id = #{navId}
+    </update>
+
+</mapper>

@@ -14,20 +14,18 @@ public interface NewsService {
 
     List<NewsDto> selectAll();
 
-    List<NewsDto> selectAllByNewsId(Integer newsId);
-
     List<NewsDto> selectNewsByTypeIdAndKeyWord(Integer typeId,String newsTitle);
 
-    List<NewsDto> selectThreeNewsByTypeId(Integer typeId);
-
-    List<NewsDto> selectNewsByTypeId(Integer typeId);
-
     ArticleDto selectArticleDtoByNewsId(Integer newsId);
+
+    List<ArticleDto> selectNewsOfTheDay();
 
     List<ArticleDto> selectArticleDtoByViews();
 
     Integer newsCount();
 
     Integer countViews();
+
+    int updateNews(News news);
 
 }

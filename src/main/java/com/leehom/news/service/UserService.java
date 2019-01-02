@@ -15,6 +15,5 @@ public interface UserService {
 
     boolean userRegister(User user);
 
-//    User selectUserByUserName(String userName);
-
+    User selectUserById(Integer userId);
 }

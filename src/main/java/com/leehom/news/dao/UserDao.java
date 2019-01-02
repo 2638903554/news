@@ -13,6 +13,13 @@ public interface UserDao {
     User selectUserByUserName(String userName);
 
     /**
+     * 根据用户id查找用户
+     * @param userId
+     * @return
+     */
+    User selectUserByUserId(Integer userId);
+
+    /**
      * 根据手机号码查找用户
      * @param userPhone
      * @return

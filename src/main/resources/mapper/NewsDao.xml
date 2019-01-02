@@ -87,6 +87,25 @@
         DESC
     </select>
 
+    <select id="selectNewsOfTheDay" resultType="com.leehom.news.dto.ArticleDto">
+        SELECT
+            ns.news_id,
+            ns.news_title,
+            ns.news_content,
+            ns.news_words,
+            ns.news_words,
+            ns.news_remark,
+            sv.subnav_name,
+            nv.nav_name,
+            ns.create_time
+        FROM news ns
+        INNER JOIN
+            subnav sv on sv.subnav_id = ns.subnav_id
+        INNER JOIN
+            nav nv on nv.nav_id = sv.nav_id
+        where to_days(ns.create_time) = to_days(now())
+    </select>
+
 
     <select id="selectThreeNewsByTypeId" resultType="com.leehom.news.dto.NewsDto">
         select
@@ -127,4 +146,19 @@
         WHERE
         nv.nav_id = #{typeId}
     </select>
+
+    <update id="updateNews">
+        UPDATE
+            news
+        SET
+            news_title = #{newsTitle},
+            news_remark = #{newsRemark},
+            news_content = #{newsContent},
+            news_remark = #{newsRemark},
+            news_views = #{newsViews},
+            news_words = #{newsWords}
+        where
+          news_id = #{newsId}
+    </update>
+
 </mapper>

@@ -38,11 +38,11 @@ public class NewsDaoTest extends BaseTest {
         Assert.assertTrue(newsDtoList.size() > 0);
     }
 
+
     @Test
-    public void selectNewsByTypeIdTest(){
-        List<NewsDto> newsDtoList = newsDao.selectThreeNewsByTypeId(15);
-        Assert.assertNotNull(newsDtoList);
-        Assert.assertTrue(newsDtoList.size()>0);
+    public void selectNewsOfTheDayTest(){
+        List<ArticleDto> articleDtoList = newsDao.selectNewsOfTheDay();
+        Assert.assertNotNull(articleDtoList);
     }
 
     @Test
@@ -69,4 +69,11 @@ public class NewsDaoTest extends BaseTest {
 
     }
 
+    @Test
+    public void updateNews(){
+        News news = newsDao.selectNewsById(NEWSID);
+        news.setNewsViews(news.getNewsViews()+1);
+        int result = newsDao.updateNews(news);
+        Assert.assertTrue(1 == result);
+    }
 }
