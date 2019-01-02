@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leehom.news.dao.WordsDao">
+
+    <insert id="insertWords">
+        INSERT INTO words (user_id,
+                           create_time,
+                           words_content,
+                           news_id)
+                VALUES (#{userId},
+                        #{createTime},
+                        #{wordsContent},
+                        #{newsId})
+    </insert>
+
+    <select id="selectAll" parameterType="Integer" resultType="com.leehom.news.dto.WordsDto">
+        select
+             ws.words_content,
+              ws.create_time,
+              ur.user_nick,
+            ur.head_img
+        from
+            words ws
+        INNER JOIN user ur on ur.user_id = ws.user_id
+        WHERE ws.news_id = #{newsId}
+        ORDER BY ws.create_time DESC
+    </select>
+
+</mapper>

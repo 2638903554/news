@@ -93,7 +93,7 @@
             ns.news_title,
             ns.news_content,
             ns.news_words,
-            ns.news_words,
+            ns.news_views,
             ns.news_remark,
             sv.subnav_name,
             nv.nav_name,
@@ -106,20 +106,6 @@
         where to_days(ns.create_time) = to_days(now())
     </select>
 
-
-    <select id="selectThreeNewsByTypeId" resultType="com.leehom.news.dto.NewsDto">
-        select
-            ns.news_id,
-            ns.news_title,
-            s.subnav_name,
-            ns.create_time
-        FROM nav nv
-            INNER JOIN subnav s on s.nav_id = nv.nav_id
-            INNER JOIN news ns on ns.subnav_id = s.subnav_id
-        WHERE
-            nv.nav_id = #{typeId}
-        LIMIT 0,3
-    </select>
 
     <select id="newsCount" resultType="Integer">
         SELECT count(*) as value FROM news

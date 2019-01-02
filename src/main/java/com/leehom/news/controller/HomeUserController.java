@@ -39,17 +39,14 @@ public class HomeUserController {
     }
 
     @PostMapping(value = "/login")
-    public ResultVO login(@RequestBody User user,
-                          HttpServletRequest request,
-                          HttpServletResponse response,
-                          HttpSession session){
+    public ResultVO login(@RequestBody User user){
         User result = userService.userLogin(user);
         if(result == null){
             log.error("用户登录：账号或密码错误.{}",user);
             throw new NewsException(ResultEnum.LOGIN_ERROR);
         }
-        addCookie(user,request,response);
-        session.setAttribute("user",result);
+//        addCookie(user,request,response);
+//        session.setAttribute("user",result);
         return ResultVOUtil.success(result);
     }
 

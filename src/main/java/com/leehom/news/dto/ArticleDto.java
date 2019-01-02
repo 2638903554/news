@@ -25,7 +25,7 @@ public class ArticleDto {
 
     private String navName;
 
-    private Integer newsViews = 0;
+    private Integer newsViews;
 
     private Integer newsWords = 0;
 

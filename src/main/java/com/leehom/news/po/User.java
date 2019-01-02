@@ -18,6 +18,8 @@ public class User {
      */
     private String userName;
 
+    private String headImg;
+
     /**
      * 用户昵称
      */
