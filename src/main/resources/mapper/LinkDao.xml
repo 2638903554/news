@@ -27,11 +27,7 @@
     </select>
 
     <select id="selectAll" resultType="Link">
-        select *
-#             link_id,link_name,link_url,link_remark,
-#             create_time,update_time
-        from
-            link
+        select * from link
     </select>
 
     <select id="count" resultType="Integer">

@@ -4,8 +4,8 @@
 <mapper namespace="com.leehom.news.dao.NewsmakerDao">
 
     <insert id="insertNewsmaker">
-        insert into newsmaker (newsmaker_name, newsmaker_address, newsmaker_age, newsmaker_job, newsmaker_remark, vote_quantity)
-        values (#{newsmakerName},#{newsmakerAddress},#{newsmakerAge},#{newsmakerJob},#{newsmakerRemark},#{voteQuantity});
+        insert into newsmaker (newsmaker_name, newsmaker_address, newsmaker_age, newsmaker_job, newsmaker_remark)
+        values (#{newsmakerName},#{newsmakerAddress},#{newsmakerAge},#{newsmakerJob},#{newsmakerRemark});
     </insert>
 
     <delete id="deleteNewsmakerById">

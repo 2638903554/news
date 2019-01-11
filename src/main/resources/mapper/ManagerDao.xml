@@ -2,6 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.leehom.news.dao.ManagerDao">
 
+    <select id="selectManagerByName" resultType="Manager">
+        SELECT * from manager WHERE manager_user = #{name}
+    </select>
+
     <!--<select id="selectManagerById" resultType="Manager">-->
         <!--SELECT * FROM manager WHERE manager_id = #{managerId}-->
     <!--</select>-->

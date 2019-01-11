@@ -1,10 +1,25 @@
 package com.leehom.news.dao;
 
+import com.leehom.news.po.Manager;
+import com.leehom.news.po.User;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Assert;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 @Slf4j
 public class ManagerDaoTest extends BaseTest {
+
+
+    @Autowired
+    private ManagerDao managerDao;
+
+    @Test
+    public void selectManagerByNameTest(){
+        Manager manager = managerDao.selectManagerByName("szpt");
+        Assert.assertNotNull(manager);
+    }
 
 //    @Test
 //    public void findManagerByIdTest() throws Exception {

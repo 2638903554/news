@@ -18,6 +18,9 @@ public class User {
      */
     private String userName;
 
+    /**
+     * 头像路径
+     */
     private String headImg;
 
     /**
@@ -39,6 +42,16 @@ public class User {
      * 用户邮箱
      */
     private String userEmail;
+
+    /**
+     * 用户地址
+     */
+    private String userAddress;
+
+    /**
+     * 用户简介
+     */
+    private String userRemark;
 
     /**
      * 用户投票状态

@@ -14,32 +14,26 @@ public class LinkServiceImpl implements LinkService {
     @Autowired
     private LinkDao linkDao;
 
-    @Override
     public int insertLink(Link link) {
         return linkDao.insertLink(link);
     }
 
-    @Override
     public int deleteLinkById(Integer linkId) {
         return linkDao.deleteLinkById(linkId);
     }
 
-    @Override
     public Link selectLinkById(Integer linkId) {
         return linkDao.selectLinkById(linkId);
     }
 
-    @Override
     public List<Link> selectAll() {
         return linkDao.selectAll();
     }
 
-    @Override
     public int updateLink(Link link) {
         return linkDao.updateLink(link);
     }
 
-    @Override
     public Integer countLink() {
         return linkDao.count();
     }

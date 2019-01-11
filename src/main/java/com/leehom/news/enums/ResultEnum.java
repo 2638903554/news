@@ -37,6 +37,8 @@ public enum ResultEnum implements CodeEnum {
 
     USER_ID_ERROR(19,"用户id错误"),
 
+    MANAGER_PARAM_ERROR(20,"管理员登录参数错误")
+
 
 
 
